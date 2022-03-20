@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
+   <children>
+      <HBox layoutX="146.0" layoutY="140.0" prefHeight="100.0" prefWidth="290.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+               <children>
+                  <Button fx:id="EletricBillButton" mnemonicParsing="false" onAction="#EletricBillButtonPushed" text="Electric" />
+                  <Button mnemonicParsing="false" text="Button" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+               <children>
+                  <Button fx:id="WaterBillButton" mnemonicParsing="false" onAction="#WaterBillButtonPushed" text="Water" />
+                  <Button mnemonicParsing="false" text="Button" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+               <children>
+                  <Button fx:id="GasBillButton" mnemonicParsing="false" onAction="#GasBillButtonPushed" text="Gas" />
+                  <Button mnemonicParsing="false" text="Button" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="126.0" layoutY="76.0" text="Which bill would you like to pay?">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
