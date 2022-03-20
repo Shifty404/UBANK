@@ -7,19 +7,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class CashWithdrawSceneController implements Initializable {
+public class CashDepositSceneController implements Initializable {
 
     @FXML
-    private TextField AmountTF;
+    private TextField DepositAmountTF;
     @FXML
-    private Button WithdrawConfirmButton;
+    private Button DepositConfirmButton;
 
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
 
     @FXML
-    private void WithdrawConfirmButtonPushed(ActionEvent event) {
+    private void DepositConfirmButtonPushed(ActionEvent event) {
     }
     
 }
