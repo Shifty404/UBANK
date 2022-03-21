@@ -18,11 +18,13 @@ import javafx.scene.control.Button;
 public class PayBillSceneController implements Initializable {
 
     @FXML
-    private Button EletricBillButton;
+    private Button eletricBillButton;
     @FXML
-    private Button WaterBillButton;
+    private Button internetBillButton;
     @FXML
-    private Button GasBillButton;
+    private Button waterBillButton;
+    @FXML
+    private Button gasBillButton;
 
     /**
      * Initializes the controller class.
@@ -33,15 +35,19 @@ public class PayBillSceneController implements Initializable {
     }    
 
     @FXML
-    private void EletricBillButtonPushed(ActionEvent event) {
+    private void eletricBillButtonPushed(ActionEvent event) {
     }
 
     @FXML
-    private void WaterBillButtonPushed(ActionEvent event) {
+    private void internetBillButtonPushed(ActionEvent event) {
     }
 
     @FXML
-    private void GasBillButtonPushed(ActionEvent event) {
+    private void waterBillButtonPushed(ActionEvent event) {
+    }
+
+    @FXML
+    private void gasBillButtonPushed(ActionEvent event) {
     }
     
 }
