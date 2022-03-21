@@ -10,9 +10,9 @@ import javafx.scene.control.TextField;
 public class CashDepositSceneController implements Initializable {
 
     @FXML
-    private TextField DepositAmountTF;
-    @FXML
     private Button DepositConfirmButton;
+    @FXML
+    private TextField DepositAmountTextField;
 
     
     @Override

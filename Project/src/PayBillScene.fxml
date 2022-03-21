@@ -9,24 +9,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
    <children>
-      <HBox layoutX="146.0" layoutY="140.0" prefHeight="100.0" prefWidth="290.0">
+      <HBox layoutX="205.0" layoutY="150.0" prefHeight="100.0" prefWidth="191.0">
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
                <children>
-                  <Button fx:id="EletricBillButton" mnemonicParsing="false" onAction="#EletricBillButtonPushed" text="Electric" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="eletricBillButton" mnemonicParsing="false" onAction="#eletricBillButtonPushed" text="Electric" />
+                  <Button fx:id="internetBillButton" mnemonicParsing="false" onAction="#internetBillButtonPushed" text="Internet" />
                </children>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="119.0" spacing="30.0">
                <children>
-                  <Button fx:id="WaterBillButton" mnemonicParsing="false" onAction="#WaterBillButtonPushed" text="Water" />
-                  <Button mnemonicParsing="false" text="Button" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-               <children>
-                  <Button fx:id="GasBillButton" mnemonicParsing="false" onAction="#GasBillButtonPushed" text="Gas" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="waterBillButton" mnemonicParsing="false" onAction="#waterBillButtonPushed" text="Water" />
+                  <Button fx:id="gasBillButton" mnemonicParsing="false" onAction="#gasBillButtonPushed" text="Gas" />
                </children>
             </VBox>
          </children>

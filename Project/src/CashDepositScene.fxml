@@ -13,7 +13,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="DepositAmountTF" layoutX="218.0" layoutY="175.0" prefHeight="25.0" prefWidth="166.0" promptText="Amount" />
+      <TextField fx:id="DepositAmountTextField" layoutX="218.0" layoutY="175.0" prefHeight="25.0" prefWidth="166.0" promptText="Amount" />
       <Button fx:id="DepositConfirmButton" layoutX="272.0" layoutY="242.0" mnemonicParsing="false" onAction="#DepositConfirmButtonPushed" text="Confirm" />
    </children>
 </AnchorPane>

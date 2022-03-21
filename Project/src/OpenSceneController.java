@@ -6,32 +6,23 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
-/**
- * FXML Controller class
- *
- * @author shifty
- */
 public class OpenSceneController implements Initializable {
 
     @FXML
-    private Button SignUpButton;
+    private Button signupButton;
     @FXML
-    private Button LogInButton;
+    private Button LoginButton;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
 
     @FXML
-    private void SignUpButtonPush(ActionEvent event) {
+    private void signupButtonPushed(ActionEvent event) {
     }
 
     @FXML
-    private void LogInButtonPush(ActionEvent event) {
+    private void loginButtonPushed(ActionEvent event) {
     }
     
 }
