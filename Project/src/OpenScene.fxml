@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
    <children>
       <Button fx:id="signupButton" layoutX="88.0" layoutY="283.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" text="Sign up" />
-      <Button fx:id="LoginButton" layoutX="358.0" layoutY="283.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" text="Log in" />
+      <Button fx:id="loginButton" layoutX="358.0" layoutY="283.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" text="Log in" />
       <VBox layoutX="250.0" layoutY="41.0" prefHeight="106.0" prefWidth="100.0" spacing="50.0">
          <children>
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" text="Welcome">
