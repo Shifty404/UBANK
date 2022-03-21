@@ -19,6 +19,4 @@ public class LaunchClass extends Application{
         stage.setScene(scene);
         stage.show();
     }
-    
-    
 }

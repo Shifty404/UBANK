@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CashDepositSceneController">
+   <children>
+      <Label layoutX="100.0" layoutY="96.0" text="How much would you like to deposit?">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DepositAmountTF" layoutX="218.0" layoutY="175.0" prefHeight="25.0" prefWidth="166.0" promptText="Amount" />
+      <Button fx:id="DepositConfirmButton" layoutX="272.0" layoutY="242.0" mnemonicParsing="false" onAction="#DepositConfirmButtonPushed" text="Confirm" />
+   </children>
+</AnchorPane>
