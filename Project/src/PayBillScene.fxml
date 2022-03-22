@@ -2,6 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -9,23 +13,79 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
    <children>
-      <HBox layoutX="205.0" layoutY="150.0" prefHeight="100.0" prefWidth="191.0">
+      <HBox layoutX="137.0" layoutY="129.0" prefHeight="149.0" prefWidth="328.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+            <VBox alignment="CENTER" prefHeight="149.0" prefWidth="172.0" spacing="30.0">
                <children>
-                  <Button fx:id="eletricBillButton" mnemonicParsing="false" onAction="#eletricBillButtonPushed" text="Electric" />
-                  <Button fx:id="internetBillButton" mnemonicParsing="false" onAction="#internetBillButtonPushed" text="Internet" />
+                  <Button fx:id="eletricBillButton" mnemonicParsing="false" onAction="#eletricBillButtonPushed" prefHeight="25.0" prefWidth="104.0" text="Electric">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect></Button>
+                  <Button fx:id="internetBillButton" mnemonicParsing="false" onAction="#internetBillButtonPushed" prefHeight="25.0" prefWidth="105.0" text="Internet">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect></Button>
                </children>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="119.0" spacing="30.0">
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="149.0" prefWidth="165.0" spacing="30.0">
                <children>
-                  <Button fx:id="waterBillButton" mnemonicParsing="false" onAction="#waterBillButtonPushed" text="Water" />
-                  <Button fx:id="gasBillButton" mnemonicParsing="false" onAction="#gasBillButtonPushed" text="Gas" />
+                  <Button fx:id="waterBillButton" mnemonicParsing="false" onAction="#waterBillButtonPushed" prefHeight="25.0" prefWidth="107.0" text="Water">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect></Button>
+                  <Button fx:id="gasBillButton" mnemonicParsing="false" onAction="#gasBillButtonPushed" prefHeight="25.0" prefWidth="108.0" text="Gas">
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect></Button>
                </children>
             </VBox>
          </children>
       </HBox>
-      <Label layoutX="126.0" layoutY="76.0" text="Which bill would you like to pay?">
+      <Label layoutX="126.0" layoutY="76.0" text="Which bill would you like to pay?" textFill="#31299e">
          <font>
             <Font size="24.0" />
          </font>
