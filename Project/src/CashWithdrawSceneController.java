@@ -10,9 +10,9 @@ import javafx.scene.control.TextField;
 public class CashWithdrawSceneController implements Initializable {
 
     @FXML
-    private TextField AmountTF;
-    @FXML
     private Button WithdrawConfirmButton;
+    @FXML
+    private TextField AmountTextField;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

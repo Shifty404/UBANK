@@ -7,20 +7,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class CashDepositSceneController implements Initializable {
+public class ForgetpasswordController implements Initializable {
 
     @FXML
-    private Button DepositConfirmButton;
+    private TextField forgetPasswordMailTextField;
     @FXML
-    private TextField DepositAmountTextField;
+    private TextField accountNumberTextField;
+    @FXML
+    private Button forgetPasswordSearch;
 
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
 
     @FXML
-    private void DepositConfirmButtonPushed(ActionEvent event) {
+    private void forgetPasswordSearchPushed(ActionEvent event) {
     }
     
 }
