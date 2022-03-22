@@ -16,6 +16,7 @@ public class LaunchClass extends Application{
     public void start(Stage stage) throws Exception {
         Parent groot = FXMLLoader.load(getClass().getResource("OpenScene.fxml"));
         Scene scene = new Scene(groot);
+        stage.setTitle("UBANK");
         stage.setScene(scene);
         stage.show();
     }

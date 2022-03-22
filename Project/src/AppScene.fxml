@@ -4,84 +4,101 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppSceneController">
    <children>
-      <Label layoutX="308.0" layoutY="74.0" prefHeight="78.0" prefWidth="150.0" text="UBANK" textFill="#801111">
+      <Label layoutX="296.0" layoutY="88.0" prefHeight="72.0" prefWidth="177.0" text="UBANK" textFill="#801111">
          <font>
-            <Font name="System Bold Italic" size="36.0" />
+            <Font name="System Bold Italic" size="48.0" />
          </font>
       </Label>
       <Label fx:id="appSceneNamelabel" layoutX="52.0" layoutY="88.0" prefHeight="17.0" prefWidth="106.0" />
-      <VBox layoutX="158.0" layoutY="204.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
+      <VBox layoutX="158.0" layoutY="229.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
             <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Deposit">
-               <effect>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant />
-                     </light>
-                  </Lighting>
-               </effect>
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
             </Button>
             <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Withdraw">
-               <effect>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant />
-                     </light>
-                  </Lighting>
-               </effect>
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
             </Button>
          </children>
       </VBox>
-      <VBox layoutX="443.0" layoutY="204.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
+      <VBox layoutX="443.0" layoutY="229.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
             <Button fx:id="moneyRateCalculator" mnemonicParsing="false" onAction="#moneyRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Money rate calculator">
-               <effect>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant />
-                     </light>
-                  </Lighting>
-               </effect>
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
             </Button>
             <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Pay bill">
-               <effect>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant />
-                     </light>
-                  </Lighting>
-               </effect>
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
             </Button>
          </children>
       </VBox>
