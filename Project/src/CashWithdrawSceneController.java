@@ -21,5 +21,4 @@ public class CashWithdrawSceneController implements Initializable {
     @FXML
     private void WithdrawConfirmButtonPushed(ActionEvent event) {
     }
-    
 }
