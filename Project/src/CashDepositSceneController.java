@@ -18,7 +18,6 @@ public class CashDepositSceneController implements Initializable {
     @FXML
     private TextField DepositAmountTextField;
 
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
@@ -31,4 +30,5 @@ public class CashDepositSceneController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    
 }

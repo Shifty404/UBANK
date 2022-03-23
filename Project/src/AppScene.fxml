@@ -12,13 +12,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppSceneController">
    <children>
-      <Label layoutX="296.0" layoutY="88.0" prefHeight="72.0" prefWidth="177.0" text="UBANK" textFill="#801111">
+      <Label layoutX="287.0" layoutY="150.0" prefHeight="72.0" prefWidth="177.0" text="UBANK" textFill="#801111">
          <font>
             <Font name="System Bold Italic" size="48.0" />
          </font>
       </Label>
       <Label fx:id="appSceneNamelabel" layoutX="52.0" layoutY="88.0" prefHeight="17.0" prefWidth="106.0" />
-      <VBox layoutX="158.0" layoutY="229.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
+      <VBox layoutX="158.0" layoutY="277.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
             <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Deposit">
                <font>
@@ -60,7 +60,7 @@
             </Button>
          </children>
       </VBox>
-      <VBox layoutX="443.0" layoutY="229.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
+      <VBox layoutX="443.0" layoutY="277.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
             <Button fx:id="moneyRateCalculator" mnemonicParsing="false" onAction="#moneyRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Money rate calculator">
                <font>
@@ -102,5 +102,24 @@
             </Button>
          </children>
       </VBox>
+      <Button fx:id="signoutButton" layoutX="593.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #DC143C;" text="Sign Out">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <effect>
+            <Reflection>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="250.0" />
+                     </light>
+                  </Lighting>
+               </input>
+            </Reflection>
+         </effect>
+      </Button>
    </children>
 </AnchorPane>
