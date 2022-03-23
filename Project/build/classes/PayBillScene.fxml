@@ -17,7 +17,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="149.0" prefWidth="172.0" spacing="30.0">
                <children>
-                  <Button fx:id="eletricBillButton" mnemonicParsing="false" onAction="#eletricBillButtonPushed" prefHeight="25.0" prefWidth="104.0" text="Electric">
+                  <Button fx:id="eletricBillButton" mnemonicParsing="false" onAction="#eletricBillButtonPushed" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #0096FF;" text="Electric">
                      <effect>
                         <Reflection>
                            <input>
@@ -32,7 +32,7 @@
                            </input>
                         </Reflection>
                      </effect></Button>
-                  <Button fx:id="internetBillButton" mnemonicParsing="false" onAction="#internetBillButtonPushed" prefHeight="25.0" prefWidth="105.0" text="Internet">
+                  <Button fx:id="internetBillButton" mnemonicParsing="false" onAction="#internetBillButtonPushed" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #0096FF;" text="Internet">
                      <effect>
                         <Reflection>
                            <input>
@@ -51,7 +51,7 @@
             </VBox>
             <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="149.0" prefWidth="165.0" spacing="30.0">
                <children>
-                  <Button fx:id="waterBillButton" mnemonicParsing="false" onAction="#waterBillButtonPushed" prefHeight="25.0" prefWidth="107.0" text="Water">
+                  <Button fx:id="waterBillButton" mnemonicParsing="false" onAction="#waterBillButtonPushed" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #0096FF;" text="Water">
                      <effect>
                         <Reflection>
                            <input>
@@ -66,7 +66,7 @@
                            </input>
                         </Reflection>
                      </effect></Button>
-                  <Button fx:id="gasBillButton" mnemonicParsing="false" onAction="#gasBillButtonPushed" prefHeight="25.0" prefWidth="108.0" text="Gas">
+                  <Button fx:id="gasBillButton" mnemonicParsing="false" onAction="#gasBillButtonPushed" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #0096FF;" text="Gas">
                      <effect>
                         <Reflection>
                            <input>

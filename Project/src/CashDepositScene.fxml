@@ -27,7 +27,7 @@
          <effect>
             <Reflection />
          </effect></TextField>
-      <Button fx:id="DepositConfirmButton" layoutX="305.0" layoutY="379.0" mnemonicParsing="false" onAction="#DepositConfirmButtonPushed" prefHeight="25.0" prefWidth="150.0" text="Confirm">
+      <Button fx:id="DepositConfirmButton" layoutX="305.0" layoutY="379.0" mnemonicParsing="false" onAction="#DepositConfirmButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Confirm">
          <effect>
             <Reflection>
                <input>

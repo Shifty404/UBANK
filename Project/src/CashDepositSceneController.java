@@ -31,5 +31,4 @@ public class CashDepositSceneController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
 }
