@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
    <children>
-      <Button fx:id="signupButton" layoutX="88.0" layoutY="283.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Sign up">
+      <Button fx:id="signupButton" layoutX="122.0" layoutY="392.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Sign up">
          <effect>
             <Reflection>
                <input>
@@ -27,7 +27,7 @@
                </input>
             </Reflection>
          </effect></Button>
-      <Button fx:id="loginButton" layoutX="358.0" layoutY="283.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Log in">
+      <Button fx:id="loginButton" layoutX="467.0" layoutY="392.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Log in">
          <effect>
             <Reflection>
                <input>
@@ -42,17 +42,17 @@
                </input>
             </Reflection>
          </effect></Button>
-      <VBox layoutX="180.0" layoutY="36.0" prefHeight="167.0" prefWidth="214.0" spacing="25.0">
+      <VBox layoutX="197.0" layoutY="58.0" prefHeight="290.0" prefWidth="347.0" spacing="25.0">
          <children>
-            <Label alignment="CENTER" prefHeight="28.0" prefWidth="259.0" text="Welcome">
+            <Label alignment="CENTER" prefHeight="78.0" prefWidth="347.0" text="Welcome">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font></Label>
-            <Label alignment="CENTER" prefHeight="28.0" prefWidth="227.0" text="To">
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="347.0" text="To">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font></Label>
-            <Label alignment="CENTER" blendMode="SRC_ATOP" cache="true" prefHeight="62.0" prefWidth="232.0" text="UBANK" textFill="#8c0b65">
+            <Label alignment="CENTER" blendMode="SRC_ATOP" cache="true" prefHeight="75.0" prefWidth="347.0" text="UBANK" textFill="#8c0b65">
                <font>
                   <Font name="Arial Bold Italic" size="50.0" />
                </font>
