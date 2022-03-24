@@ -39,4 +39,5 @@ public class OpenSceneController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    
 }

@@ -11,11 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author saya0
- */
 public class AppSceneController implements Initializable {
 
     @FXML
@@ -28,13 +23,11 @@ public class AppSceneController implements Initializable {
     private Button moneyRateCalculator;
     @FXML
     private Button payBillButton;
+    @FXML
+    private Button signoutButton;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
 
     @FXML
@@ -63,6 +56,15 @@ public class AppSceneController implements Initializable {
     private void payBillButtonPushed(ActionEvent event) throws Exception {
         Parent groot = FXMLLoader.load(getClass().getResource("PayBillScene.fxml"));
         Stage stage = (Stage)payBillButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void signoutButtonPushed(ActionEvent event) throws Exception {
+        Parent groot = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+        Stage stage = (Stage)signoutButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();

@@ -5,10 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -19,13 +19,14 @@ public class LoginSceneController implements Initializable {
     @FXML
     private TextField mailTextField;
     @FXML
-    private TextField passwordTextField;
-    @FXML
     private Button loginButton;
+    @FXML
+    private PasswordField passwordField;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
+    
     @FXML
     private void loginButtonPushed(ActionEvent event) throws Exception {
         Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
@@ -36,11 +37,12 @@ public class LoginSceneController implements Initializable {
     }
 
     @FXML
-    private void forgotPassButtonPushed(ActionEvent event)throws Exception {  
-        Parent groot = FXMLLoader.load(getClass().getResource("Forgetpassword.fxml"));
+    private void forgotPasswordButtonPushed(ActionEvent event)throws Exception {  
+        Parent groot = FXMLLoader.load(getClass().getResource("ForgetPassword.fxml"));
         Stage stage = (Stage)forgetPasswordButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();
     }
+    
 }

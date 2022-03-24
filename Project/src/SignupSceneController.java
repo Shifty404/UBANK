@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -21,8 +22,6 @@ public class SignupSceneController implements Initializable {
     @FXML
     private TextField mailTextField;
     @FXML
-    private TextField birthdayTextField;
-    @FXML
     private TextField genderTextField;
     @FXML
     private TextField phoneNumberTextField;
@@ -32,10 +31,11 @@ public class SignupSceneController implements Initializable {
     private TextField passwordTextField;
     @FXML
     private TextField confirmPasswordTextField;
+    @FXML
+    private DatePicker birthdayDatePicker;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
 
     @FXML
