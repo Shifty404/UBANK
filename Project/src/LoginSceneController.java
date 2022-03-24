@@ -37,7 +37,7 @@ public class LoginSceneController implements Initializable {
     }
 
     @FXML
-    private void forgotPassButtonPushed(ActionEvent event)throws Exception {  
+    private void forgotPasswordButtonPushed(ActionEvent event)throws Exception {  
         Parent groot = FXMLLoader.load(getClass().getResource("ForgetPassword.fxml"));
         Stage stage = (Stage)forgetPasswordButton.getScene().getWindow();
         Scene scene = new Scene(groot);

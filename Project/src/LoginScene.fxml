@@ -37,7 +37,7 @@
             </Reflection>
          </effect></Button>
       <Label layoutX="316.0" layoutY="362.0" prefHeight="25.0" prefWidth="118.0" text="Forgotten password?" />
-      <Button fx:id="forgetPasswordButton" layoutX="277.0" layoutY="418.0" mnemonicParsing="false" onAction="#forgotPassButtonPushed" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #0096FF;" text="Yes">
+      <Button fx:id="forgetPasswordButton" layoutX="277.0" layoutY="418.0" mnemonicParsing="false" onAction="#forgotPasswordButtonPushed" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #0096FF;" text="Yes">
          <effect>
             <Reflection>
                <input>
