@@ -39,7 +39,7 @@
                   </Reflection>
                </effect>
             </Button>
-            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Withdraw">
+            <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Pay bill">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -62,7 +62,7 @@
       </VBox>
       <VBox layoutX="443.0" layoutY="277.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
-            <Button fx:id="moneyRateCalculator" mnemonicParsing="false" onAction="#moneyRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Money rate calculator">
+            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Withdraw">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
@@ -81,7 +81,7 @@
                   </Reflection>
                </effect>
             </Button>
-            <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Pay bill">
+            <Button fx:id="exchangeRateCalculator" mnemonicParsing="false" onAction="#exchangeRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Exchange rate calculator">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>

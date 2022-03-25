@@ -20,11 +20,11 @@ public class AppSceneController implements Initializable {
     @FXML
     private Button withdrawButton;
     @FXML
-    private Button moneyRateCalculator;
-    @FXML
     private Button payBillButton;
     @FXML
     private Button signoutButton;
+    @FXML
+    private Button exchangeRateCalculator;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -48,9 +48,6 @@ public class AppSceneController implements Initializable {
         stage.show();
     }
 
-    @FXML
-    private void moneyRateCalculatorPushed(ActionEvent event) {
-    }
 
     @FXML
     private void payBillButtonPushed(ActionEvent event) throws Exception {
@@ -68,6 +65,10 @@ public class AppSceneController implements Initializable {
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void exchangeRateCalculatorPushed(ActionEvent event) {
     }
     
 }
