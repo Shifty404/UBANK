@@ -17,7 +17,6 @@
             <Font name="System Bold Italic" size="48.0" />
          </font>
       </Label>
-      <Label fx:id="appSceneNamelabel" layoutX="52.0" layoutY="88.0" prefHeight="17.0" prefWidth="106.0" />
       <VBox layoutX="158.0" layoutY="277.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
             <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #0096FF;" text="Deposit">

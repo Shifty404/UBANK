@@ -17,6 +17,8 @@ public class CashWithdrawSceneController implements Initializable {
     private Button WithdrawConfirmButton;
     @FXML
     private TextField AmountTextField;
+    @FXML
+    private Button backButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -26,6 +28,15 @@ public class CashWithdrawSceneController implements Initializable {
     private void WithdrawConfirmButtonPushed(ActionEvent event) throws Exception {
         Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
         Stage stage = (Stage)WithdrawConfirmButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void backButtonPushed(ActionEvent event) throws Exception {
+        Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+        Stage stage = (Stage)backButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();

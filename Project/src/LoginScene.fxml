@@ -58,5 +58,6 @@
          </font>
       </Label>
       <PasswordField fx:id="passwordField" layoutX="123.0" layoutY="223.0" prefHeight="35.0" prefWidth="521.0" promptText="Password" />
+      <Button fx:id="backButton" layoutX="673.0" layoutY="536.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
    </children>
 </Pane>

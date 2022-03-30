@@ -86,5 +86,6 @@
             </VBox>
          </children>
       </HBox>
+      <Button fx:id="backButton" layoutX="671.0" layoutY="520.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
    </children>
 </Pane>

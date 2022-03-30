@@ -33,6 +33,8 @@ public class SignupSceneController implements Initializable {
     private TextField confirmPasswordTextField;
     @FXML
     private DatePicker birthdayDatePicker;
+    @FXML
+    private Button backButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -45,6 +47,15 @@ public class SignupSceneController implements Initializable {
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void backButtonPushed(ActionEvent event)throws Exception {
+        Parent groot = FXMLLoader.load(getClass().getResource("OpenScene.fxml"));
+        Stage stage = (Stage)backButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show(); 
     }
     
 }

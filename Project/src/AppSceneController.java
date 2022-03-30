@@ -1,4 +1,4 @@
-
+ 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -8,13 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class AppSceneController implements Initializable {
 
-    @FXML
-    private Label appSceneNamelabel;
     @FXML
     private Button depositButton;
     @FXML
@@ -48,7 +45,6 @@ public class AppSceneController implements Initializable {
         stage.show();
     }
 
-
     @FXML
     private void payBillButtonPushed(ActionEvent event) throws Exception {
         Parent groot = FXMLLoader.load(getClass().getResource("PayBillScene.fxml"));
@@ -60,7 +56,7 @@ public class AppSceneController implements Initializable {
 
     @FXML
     private void signoutButtonPushed(ActionEvent event) throws Exception {
-        Parent groot = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+        Parent groot = FXMLLoader.load(getClass().getResource("OpenScene.fxml"));
         Stage stage = (Stage)signoutButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -70,5 +66,5 @@ public class AppSceneController implements Initializable {
     @FXML
     private void exchangeRateCalculatorPushed(ActionEvent event) {
     }
-    
+
 }
