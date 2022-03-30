@@ -22,9 +22,9 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your electricity bill is " />
-                        <Label layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="163.0" text="how much would you like to pay?" />
-                        <TextField layoutX="58.0" layoutY="194.0" />
+                        <Label fx:id="electricityBillLabel" layoutX="192.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
+                        <TextField layoutX="73.0" layoutY="176.0" />
                         <Button layoutX="107.0" layoutY="233.0" mnemonicParsing="false" text="Button" />
                      </children></AnchorPane>
             </content>
@@ -34,6 +34,16 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="390.0" />
+              </content>
+            </Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>
