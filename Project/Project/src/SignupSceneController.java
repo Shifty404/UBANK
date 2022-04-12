@@ -1,0 +1,61 @@
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+public class SignupSceneController implements Initializable {
+
+    @FXML
+    private Button createButton;
+    @FXML
+    private TextField nameTextField;
+    @FXML
+    private TextField mailTextField;
+    @FXML
+    private TextField genderTextField;
+    @FXML
+    private TextField phoneNumberTextField;
+    @FXML
+    private TextField yearlyIncomeTextField;
+    @FXML
+    private TextField passwordTextField;
+    @FXML
+    private TextField confirmPasswordTextField;
+    @FXML
+    private DatePicker birthdayDatePicker;
+    @FXML
+    private Button backButton;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }    
+
+    @FXML
+    private void createButtonPushed(ActionEvent event) throws IOException {
+        Parent groot = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+        Stage stage = (Stage)createButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void backButtonPushed(ActionEvent event)throws Exception {
+        Parent groot = FXMLLoader.load(getClass().getResource("OpenScene.fxml"));
+        Stage stage = (Stage)backButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show(); 
+    }
+    
+}
