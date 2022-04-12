@@ -13,16 +13,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginSceneController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginSceneController">
    <children>
-      <TextField fx:id="mailTextField" layoutX="123.0" layoutY="162.0" prefHeight="35.0" prefWidth="521.0" promptText="Phone number or email address">
+      <TextField fx:id="mailTextField" layoutX="145.0" layoutY="170.0" prefHeight="35.0" prefWidth="521.0" promptText="Phone number or email address" style="-fx-background-color: #EEEEEE;">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <Button fx:id="loginButton" layoutX="257.0" layoutY="295.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="237.0" style="-fx-background-color: #0096FF;" text="Log In">
+      <Button fx:id="loginButton" layoutX="282.0" layoutY="317.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="237.0" style="-fx-background-color: #00ADB5;" text="Log In">
          <font>
-            <Font name="System Bold Italic" size="12.0" />
+            <Font name="Times New Roman Bold" size="13.0" />
          </font>
          <effect>
             <Reflection>
@@ -38,8 +38,11 @@
                </input>
             </Reflection>
          </effect></Button>
-      <Label layoutX="316.0" layoutY="362.0" prefHeight="25.0" prefWidth="118.0" text="Forgotten password?" />
-      <Button fx:id="forgetPasswordButton" layoutX="277.0" layoutY="418.0" mnemonicParsing="false" onAction="#forgotPasswordButtonPushed" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #0096FF;" text="Yes">
+      <Label layoutX="339.0" layoutY="379.0" prefHeight="25.0" prefWidth="133.0" text="Forgotten password?" textFill="#00adb5">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <Button fx:id="forgetPasswordButton" layoutX="304.0" layoutY="426.0" mnemonicParsing="false" onAction="#forgotPasswordButtonPushed" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #00ADB5;" text="Yes">
          <effect>
             <Reflection>
                <input>
@@ -53,13 +56,34 @@
                   </Lighting>
                </input>
             </Reflection>
-         </effect></Button>
-      <PasswordField fx:id="passwordField" layoutX="123.0" layoutY="223.0" prefHeight="35.0" prefWidth="521.0" promptText="Password" />
-      <Button fx:id="backButton" layoutX="673.0" layoutY="536.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="276.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font></Button>
+      <PasswordField fx:id="passwordField" layoutX="145.0" layoutY="234.0" prefHeight="35.0" prefWidth="521.0" promptText="Password" style="-fx-background-color: #EEEEEE;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo.png.png" />
          </image>
       </ImageView>
+      <Button fx:id="backButton" layoutX="666.0" layoutY="529.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #00ADB5;" text="Back">
+         <effect>
+            <Reflection>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="250.0" />
+                     </light>
+                  </Lighting>
+               </input>
+            </Reflection>
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

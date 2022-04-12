@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
    <children>
-      <Button fx:id="signupButton" layoutX="122.0" layoutY="392.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Sign up">
+      <Button fx:id="signupButton" layoutX="122.0" layoutY="405.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Sign up">
          <effect>
             <Reflection>
                <input>
@@ -29,8 +29,11 @@
                   </Lighting>
                </input>
             </Reflection>
-         </effect></Button>
-      <Button fx:id="loginButton" layoutX="467.0" layoutY="392.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Log in">
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="loginButton" layoutX="469.0" layoutY="405.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Log in">
          <effect>
             <Reflection>
                <input>
@@ -44,14 +47,17 @@
                   </Lighting>
                </input>
             </Reflection>
-         </effect></Button>
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font></Button>
       <VBox layoutX="197.0" layoutY="58.0" prefHeight="290.0" prefWidth="347.0" spacing="25.0">
          <children>
-            <Label alignment="CENTER" prefHeight="78.0" prefWidth="347.0" text="Welcome">
+            <Label alignment="CENTER" prefHeight="78.0" prefWidth="347.0" text="Welcome" textFill="#00adb5">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font></Label>
-            <Label alignment="CENTER" prefHeight="58.0" prefWidth="347.0" text="To">
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="347.0" text="To" textFill="#00adb5">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font></Label>
