@@ -8,6 +8,8 @@
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -52,12 +54,12 @@
                </input>
             </Reflection>
          </effect></Button>
-      <Label blendMode="SRC_ATOP" cache="true" layoutX="283.0" layoutY="54.0" prefHeight="80.0" prefWidth="196.0" text="UBANK" textFill="#8c0b65">
-         <font>
-            <Font name="Arial Bold Italic" size="50.0" />
-         </font>
-      </Label>
       <PasswordField fx:id="passwordField" layoutX="123.0" layoutY="223.0" prefHeight="35.0" prefWidth="521.0" promptText="Password" />
       <Button fx:id="backButton" layoutX="673.0" layoutY="536.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="276.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.png.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

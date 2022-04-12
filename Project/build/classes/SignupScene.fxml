@@ -8,18 +8,16 @@
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupSceneController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupSceneController">
    <children>
-      <Label layoutX="310.0" layoutY="25.0" prefHeight="53.0" prefWidth="139.0" text="Sign  up" textFill="#5446bc">
-         <font>
-            <Font name="System Bold Italic" size="36.0" />
-         </font></Label>
-      <Button fx:id="createButton" layoutX="275.0" layoutY="452.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="25.0" prefWidth="208.0" style="-fx-background-color: #0096FF;" text="Create Account">
+      <Button fx:id="createButton" layoutX="275.0" layoutY="452.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="25.0" prefWidth="208.0" style="-fx-background-color: #00ADB5;" text="Create Account">
          <effect>
             <Reflection fraction="0.7" topOpacity="0.46">
                <input>
@@ -38,35 +36,35 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="198.0" spacing="26.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="Name:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="Name:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Mail:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Mail:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Birthday:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Birthday:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Gender:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Gender:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="98.0" text="Phone Number:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="98.0" text="Phone Number:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Yearly Income:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Yearly Income:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Password:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Password:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Confirm Password:">
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Confirm Password:" textFill="#00adb5">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font></Label>
@@ -74,18 +72,38 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="214.0" prefWidth="208.0" spacing="16.0">
                <children>
-                  <TextField fx:id="nameTextField" />
-                  <TextField fx:id="mailTextField" />
-                  <DatePicker fx:id="birthdayDatePicker" prefHeight="25.0" prefWidth="190.0" />
-                  <TextField fx:id="genderTextField" />
-                  <TextField fx:id="phoneNumberTextField" />
-                  <TextField fx:id="yearlyIncomeTextField" />
-                  <TextField fx:id="passwordTextField" />
-                  <TextField fx:id="confirmPasswordTextField" />
+                  <TextField fx:id="nameTextField" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="mailTextField" style="-fx-background-color: #EEEEEE;" />
+                  <DatePicker fx:id="birthdayDatePicker" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="genderTextField" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="phoneNumberTextField" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="yearlyIncomeTextField" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="passwordTextField" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="confirmPasswordTextField" style="-fx-background-color: #EEEEEE;" />
                </children>
             </VBox>
          </children>
       </HBox>
-      <Button fx:id="backButton" layoutX="671.0" layoutY="520.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
+      <ImageView fitHeight="54.0" fitWidth="185.0" layoutX="352.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user_icon_150670.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="626.0" layoutY="515.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ADB5;" text="Back">
+         <effect>
+            <Reflection fraction="0.7" topOpacity="0.46">
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="250.0" />
+                     </light>
+                  </Lighting>
+               </input>
+            </Reflection>
+         </effect>
+      </Button>
    </children>
 </Pane>
