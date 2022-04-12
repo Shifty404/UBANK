@@ -25,7 +25,6 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-<<<<<<< Updated upstream
                         <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your electricity bill is " />
                         <Label fx:id="electricityBillLabel" layoutX="192.0" layoutY="94.0" text="&lt;Amount&gt;" />
                         <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
@@ -48,7 +47,6 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
-=======
                         <Label layoutX="179.0" layoutY="74.0" text="&lt;Amount&gt;" />
                         <Button fx:id="electricityPay" layoutX="97.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #00ADB5;" text="Pay">
                            <effect>
@@ -211,9 +209,3 @@
                      </children>
                   </AnchorPane>
                </content>
->>>>>>> Stashed changes
-            </Tab>
-        </tabs>
-      </TabPane>
-   </children>
-</AnchorPane>
