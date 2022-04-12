@@ -63,7 +63,7 @@
                </font></Label>
             <ImageView fitHeight="104.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Logo.png.png" />
+                  <Image url="@Logo.png" />
                </image>
                <VBox.margin>
                   <Insets left="40.0" />
