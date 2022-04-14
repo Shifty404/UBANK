@@ -12,27 +12,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
    <children>
-      <Label layoutX="185.0" layoutY="43.0" text="Which bill would you like to pay?" textFill="#31299e">
+      <Label layoutX="226.0" layoutY="45.0" text="Which bill would you like to pay?" textFill="#31299e">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TabPane layoutY="111.0" prefHeight="467.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutY="126.0" prefHeight="475.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab closable="false" text="Electric">
           <Tab closable="false" text="Electric bill">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="840.0">
                      <children>
                         <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your electricity bill is " />
-                        <Label fx:id="electricityBillLabel" layoutX="192.0" layoutY="94.0" text="&lt;Amount&gt;" />
                         <Label fx:id="electricityBillLabel" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
                         <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField layoutX="73.0" layoutY="176.0" />
-                        <Button layoutX="107.0" layoutY="233.0" mnemonicParsing="false" text="Button" />
                         <TextField fx:id="electricBillTextField" layoutX="73.0" layoutY="176.0" />
                         <Button fx:id="electricBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#electricBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
                            <effect>
@@ -52,15 +47,6 @@
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab closable="false" text="Untitled Tab 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-            <Tab text="Untitled Tab">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="390.0" />
-              </content>
             <Tab closable="false" text="Internet bill">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -117,10 +103,6 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="Untitled Tab">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
             <Tab closable="false" text="Water bill">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
