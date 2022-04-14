@@ -61,9 +61,9 @@
             <Font name="Times New Roman Bold" size="13.0" />
          </font></Button>
       <PasswordField fx:id="passwordField" layoutX="145.0" layoutY="234.0" prefHeight="35.0" prefWidth="521.0" promptText="Password" style="-fx-background-color: #EEEEEE;" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="84.0" fitWidth="91.0" layoutX="364.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Logo.png.png" />
+            <Image url="@Log-in.png" />
          </image>
       </ImageView>
       <Button fx:id="backButton" layoutX="666.0" layoutY="529.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #00ADB5;" text="Back">

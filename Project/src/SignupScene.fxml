@@ -130,7 +130,7 @@
       </HBox>
       <ImageView fitHeight="54.0" fitWidth="185.0" layoutX="387.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@user_icon.png" />
+            <Image url="@sign-up.png" />
          </image>
       </ImageView>
       <Button fx:id="backButton" layoutX="686.0" layoutY="551.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ADB5;" text="Back">
