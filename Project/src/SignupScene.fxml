@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -15,8 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupSceneController.java">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupSceneController">
    <children>
       <Button fx:id="createButton" layoutX="310.0" layoutY="469.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="25.0" prefWidth="208.0" style="-fx-background-color: #00ADB5;" text="Create Account">
          <effect>
@@ -34,7 +34,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman" size="14.0" />
+            <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
       <HBox layoutX="231.0" layoutY="118.0" prefHeight="278.0" prefWidth="359.0">
@@ -120,7 +120,20 @@
                   <TextField fx:id="nameTextField" style="-fx-background-color: #EEEEEE;" />
                   <TextField fx:id="mailTextField" style="-fx-background-color: #EEEEEE;" />
                   <DatePicker fx:id="birthdayDatePicker" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #EEEEEE;" />
-                  <TextField fx:id="genderTextField" style="-fx-background-color: #EEEEEE;" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="55.0">
+                     <children>
+                        <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" text="Male" textFill="#00adb5">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="femaleRadioButton" mnemonicParsing="false" text="Female" textFill="#00adb5">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
                   <TextField fx:id="phoneNumberTextField" style="-fx-background-color: #EEEEEE;" />
                   <TextField fx:id="yearlyIncomeTextField" style="-fx-background-color: #EEEEEE;" />
                   <TextField fx:id="passwordTextField" style="-fx-background-color: #EEEEEE;" />
@@ -129,9 +142,9 @@
             </VBox>
          </children>
       </HBox>
-      <ImageView fitHeight="54.0" fitWidth="185.0" layoutX="387.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="379.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@user_icon.png" />
+            <Image url="@sign-up.png" />
          </image>
       </ImageView>
       <Button fx:id="backButton" layoutX="686.0" layoutY="551.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ADB5;" text="Back">
@@ -150,7 +163,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman" size="14.0" />
+            <Font name="Times New Roman Bold" size="14.0" />
          </font>
       </Button>
    </children>

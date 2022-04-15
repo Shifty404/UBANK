@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -22,8 +23,6 @@ public class SignupSceneController implements Initializable {
     @FXML
     private TextField mailTextField;
     @FXML
-    private TextField genderTextField;
-    @FXML
     private TextField phoneNumberTextField;
     @FXML
     private TextField yearlyIncomeTextField;
@@ -35,6 +34,10 @@ public class SignupSceneController implements Initializable {
     private DatePicker birthdayDatePicker;
     @FXML
     private Button backButton;
+    @FXML
+    private RadioButton maleRadioButton;
+    @FXML
+    private RadioButton femaleRadioButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

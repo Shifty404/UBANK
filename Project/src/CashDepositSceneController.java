@@ -13,18 +13,18 @@ import javafx.stage.Stage;
 
 public class CashDepositSceneController implements Initializable {
 
-    @FXML
     private Button DepositConfirmButton;
     @FXML
-    private TextField DepositAmountTextField;
-    @FXML
     private Button backButton;
+    @FXML
+    private TextField depositAmountTextField;
+    @FXML
+    private Button depositConfirmButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
 
-    @FXML
     private void DepositConfirmButtonPushed(ActionEvent event) throws Exception {
         Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
         Stage stage = (Stage)DepositConfirmButton.getScene().getWindow();
@@ -40,6 +40,10 @@ public class CashDepositSceneController implements Initializable {
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    private void depositConfirmButtonPushed(ActionEvent event) {
     }
     
 }

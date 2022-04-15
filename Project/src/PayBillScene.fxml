@@ -5,6 +5,10 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -17,32 +21,171 @@
       </Label>
       <TabPane layoutY="111.0" prefHeight="467.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab closable="false" text="Electric">
+          <Tab closable="false" text="Electric bill">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your electricity bill is " />
-                        <Label fx:id="electricityBillLabel" layoutX="192.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label fx:id="electricityBillLabel" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
                         <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField layoutX="73.0" layoutY="176.0" />
-                        <Button layoutX="107.0" layoutY="233.0" mnemonicParsing="false" text="Button" />
+                        <TextField fx:id="electricBillTextField" layoutX="73.0" layoutY="176.0" />
+                        <Button fx:id="electricBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#electricBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
+                           <effect>
+                              <Reflection>
+                                 <input>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="250.0" />
+                                       </light>
+                                    </Lighting>
+                                 </input>
+                              </Reflection>
+                           </effect></Button>
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab closable="false" text="Untitled Tab 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-            <Tab text="Untitled Tab">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="390.0" />
-              </content>
+            <Tab closable="false" text="Internet bill">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your internet bill is " />
+                        <Label fx:id="electricityBillLabel1" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
+                        <TextField fx:id="internetBillTextField" layoutX="73.0" layoutY="176.0" />
+                        <Button fx:id="internetBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#internetBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
+                           <effect>
+                              <Reflection>
+                                 <input>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="250.0" />
+                                       </light>
+                                    </Lighting>
+                                 </input>
+                              </Reflection>
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
             </Tab>
-            <Tab text="Untitled Tab">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
+            <Tab closable="false" text="Gas bill">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your gas bill is " />
+                        <Label fx:id="electricityBillLabel2" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
+                        <TextField fx:id="gasBillTextField" layoutX="73.0" layoutY="176.0" />
+                        <Button fx:id="gasBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#gasBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
+                           <effect>
+                              <Reflection>
+                                 <input>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="250.0" />
+                                       </light>
+                                    </Lighting>
+                                 </input>
+                              </Reflection>
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Water bill">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your water bill is " />
+                        <Label fx:id="electricityBillLabel3" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
+                        <TextField fx:id="waterBillTextField" layoutX="73.0" layoutY="176.0" />
+                        <Button fx:id="waterBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#waterBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
+                           <effect>
+                              <Reflection>
+                                 <input>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="250.0" />
+                                       </light>
+                                    </Lighting>
+                                 </input>
+                              </Reflection>
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Government fees">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="58.0" layoutY="94.0" prefHeight="17.0" prefWidth="142.0" text="Your government fees are" />
+                        <Label fx:id="electricityBillLabel4" layoutX="200.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
+                        <TextField fx:id="governmentFeesTextField" layoutX="73.0" layoutY="176.0" />
+                        <Button fx:id="governmentFeesPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#governmentFeesPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
+                           <effect>
+                              <Reflection>
+                                 <input>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="250.0" />
+                                       </light>
+                                    </Lighting>
+                                 </input>
+                              </Reflection>
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Credit card bill">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your credit card bill is " />
+                        <Label fx:id="electricityBillLabel5" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
+                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
+                        <TextField fx:id="creditCardTextField" layoutX="73.0" layoutY="176.0" />
+                        <Button fx:id="creditCardBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#creditCardBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
+                           <effect>
+                              <Reflection>
+                                 <input>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="250.0" />
+                                       </light>
+                                    </Lighting>
+                                 </input>
+                              </Reflection>
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
             </Tab>
         </tabs>
       </TabPane>
