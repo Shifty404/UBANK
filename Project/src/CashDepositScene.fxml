@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,26 +9,12 @@
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CashDepositSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CashDepositSceneController">
    <children>
-      <Label layoutX="76.0" layoutY="100.0" text="How much would you like to deposit?">
-         <font>
-            <Font size="36.0" />
-         </font>
-         <effect>
-            <Reflection fraction="0.54" topOpacity="0.21" />
-         </effect>
-      </Label>
-      <TextField fx:id="DepositAmountTextField" layoutX="245.0" layoutY="246.0" prefHeight="50.0" prefWidth="275.0" promptText="Amount">
-         <font>
-            <Font size="24.0" />
-         </font>
-         <effect>
-            <Reflection />
-         </effect></TextField>
-      <Button fx:id="DepositConfirmButton" layoutX="305.0" layoutY="379.0" mnemonicParsing="false" onAction="#DepositConfirmButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0096FF;" text="Confirm">
+      <Button fx:id="backButton" layoutX="676.0" layoutY="524.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #00ADB5;" text="Back">
          <effect>
             <Reflection>
                <input>
@@ -41,7 +28,52 @@
                   </Lighting>
                </input>
             </Reflection>
-         </effect></Button>
-      <Button fx:id="backButton" layoutX="675.0" layoutY="536.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
+         </effect>
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Button>
+      <VBox alignment="CENTER" prefHeight="487.0" prefWidth="800.0" spacing="100.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="800.0" text="How much would you like to deposit?" textFill="#00adb5">
+               <font>
+                  <Font name="Times New Roman" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="depositAmountTextField" prefHeight="50.0" prefWidth="275.0" promptText="Amount" style="-fx-background-color: #EEEEEE;">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="depositConfirmButton" alignment="CENTER" mnemonicParsing="false" onAction="#depositConfirmButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Confirm">
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
