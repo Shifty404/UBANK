@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
    <children>
-      <Button fx:id="signupButton" layoutX="122.0" layoutY="405.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Sign up">
+      <Button fx:id="signupButton" layoutX="122.0" layoutY="405.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Sign up" textFill="#eeeeee">
          <effect>
             <Reflection>
                <input>
@@ -31,9 +31,9 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="14.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font></Button>
-      <Button fx:id="loginButton" layoutX="531.0" layoutY="405.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Log in">
+      <Button fx:id="loginButton" layoutX="531.0" layoutY="405.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Log in" textFill="#eeeeee">
          <effect>
             <Reflection>
                <input>
@@ -49,15 +49,15 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="14.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font></Button>
       <VBox layoutX="235.0" layoutY="74.0" prefHeight="290.0" prefWidth="347.0" spacing="25.0">
          <children>
-            <Label alignment="CENTER" prefHeight="78.0" prefWidth="347.0" text="Welcome" textFill="#00adb5">
+            <Label alignment="CENTER" prefHeight="78.0" prefWidth="347.0" text="Welcome" textFill="#eeeeee">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font></Label>
-            <Label alignment="CENTER" prefHeight="58.0" prefWidth="347.0" text="To" textFill="#00adb5">
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="347.0" text="To" textFill="#eeeeee">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font></Label>
