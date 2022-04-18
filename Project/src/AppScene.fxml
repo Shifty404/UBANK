@@ -15,9 +15,9 @@
    <children>
       <VBox layoutX="186.0" layoutY="268.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
          <children>
-            <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Deposit">
+            <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Deposit" textFill="#eeeeee">
                <font>
-                  <Font name="Times New Roman Bold" size="13.0" />
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
                </font>
                <effect>
                   <Reflection>
@@ -34,9 +34,9 @@
                   </Reflection>
                </effect>
             </Button>
-            <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Pay bill">
+            <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Pay bill" textFill="#eeeeee">
                <font>
-                  <Font name="Times New Roman Bold" size="13.0" />
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
                </font>
                <effect>
                   <Reflection>
@@ -55,11 +55,11 @@
             </Button>
          </children>
       </VBox>
-      <VBox layoutX="474.0" layoutY="268.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
+      <VBox layoutX="474.0" layoutY="268.0" prefHeight="122.0" prefWidth="150.0" spacing="40.0">
          <children>
-            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Withdraw">
+            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Withdraw" textFill="#eeeeee">
                <font>
-                  <Font name="Times New Roman Bold" size="13.0" />
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
                </font>
                <effect>
                   <Reflection>
@@ -76,9 +76,9 @@
                   </Reflection>
                </effect>
             </Button>
-            <Button fx:id="exchangeRateCalculator" mnemonicParsing="false" onAction="#exchangeRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Exchange rate calculator">
+            <Button fx:id="exchangeRateCalculator" mnemonicParsing="false" onAction="#exchangeRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Exchange rate calculator" textFill="#eeeeee">
                <font>
-                  <Font name="Times New Roman Bold" size="13.0" />
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
                </font>
                <effect>
                   <Reflection>
