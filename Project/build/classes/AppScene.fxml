@@ -8,95 +8,12 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppSceneController">
    <children>
-      <VBox layoutX="186.0" layoutY="268.0" prefHeight="163.0" prefWidth="150.0" spacing="40.0">
-         <children>
-            <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Deposit" textFill="#eeeeee">
-               <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
-               </font>
-               <effect>
-                  <Reflection>
-                     <input>
-                        <Lighting>
-                           <bumpInput>
-                              <Shadow />
-                           </bumpInput>
-                           <light>
-                              <Light.Distant azimuth="250.0" />
-                           </light>
-                        </Lighting>
-                     </input>
-                  </Reflection>
-               </effect>
-            </Button>
-            <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Pay bill" textFill="#eeeeee">
-               <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
-               </font>
-               <effect>
-                  <Reflection>
-                     <input>
-                        <Lighting>
-                           <bumpInput>
-                              <Shadow />
-                           </bumpInput>
-                           <light>
-                              <Light.Distant azimuth="250.0" />
-                           </light>
-                        </Lighting>
-                     </input>
-                  </Reflection>
-               </effect>
-            </Button>
-         </children>
-      </VBox>
-      <VBox layoutX="474.0" layoutY="268.0" prefHeight="122.0" prefWidth="150.0" spacing="40.0">
-         <children>
-            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Withdraw" textFill="#eeeeee">
-               <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
-               </font>
-               <effect>
-                  <Reflection>
-                     <input>
-                        <Lighting>
-                           <bumpInput>
-                              <Shadow />
-                           </bumpInput>
-                           <light>
-                              <Light.Distant azimuth="250.0" />
-                           </light>
-                        </Lighting>
-                     </input>
-                  </Reflection>
-               </effect>
-            </Button>
-            <Button fx:id="exchangeRateCalculator" mnemonicParsing="false" onAction="#exchangeRateCalculatorPushed" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #00ADB5;" text="Exchange rate calculator" textFill="#eeeeee">
-               <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
-               </font>
-               <effect>
-                  <Reflection>
-                     <input>
-                        <Lighting>
-                           <bumpInput>
-                              <Shadow />
-                           </bumpInput>
-                           <light>
-                              <Light.Distant azimuth="250.0" />
-                           </light>
-                        </Lighting>
-                     </input>
-                  </Reflection>
-               </effect>
-            </Button>
-         </children>
-      </VBox>
       <Button fx:id="signoutButton" layoutX="678.0" layoutY="14.0" mnemonicParsing="false" onAction="#signoutButtonPushed" prefHeight="38.0" prefWidth="98.0" style="-fx-background-color: #DC143C;" text="Sign Out">
          <font>
             <Font name="System Bold Italic" size="12.0" />
@@ -121,5 +38,93 @@
             <Image url="@Logo.png" />
          </image>
       </ImageView>
+      <HBox layoutX="69.0" layoutY="289.0" prefHeight="106.0" prefWidth="663.0" spacing="150.0">
+         <children>
+            <VBox prefHeight="110.0" prefWidth="255.0" spacing="40.0">
+               <children>
+                  <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Deposit" textFill="#eeeeee">
+                     <font>
+                        <Font name="AdobeDevanagari-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Button>
+                  <Button fx:id="payBillButton" mnemonicParsing="false" onAction="#payBillButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Pay bill" textFill="#eeeeee">
+                     <font>
+                        <Font name="AdobeDevanagari-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="122.0" prefWidth="255.0" spacing="40.0">
+               <children>
+                  <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Withdraw" textFill="#eeeeee">
+                     <font>
+                        <Font name="AdobeDevanagari-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Button>
+                  <Button fx:id="exchangeRateCalculator" mnemonicParsing="false" onAction="#exchangeRateCalculatorPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Exchange rate calculator" textFill="#eeeeee">
+                     <font>
+                        <Font name="AdobeDevanagari-Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

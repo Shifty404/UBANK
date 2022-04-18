@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupSceneController">
    <children>
-      <Button fx:id="createButton" layoutX="307.0" layoutY="496.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="25.0" prefWidth="208.0" style="-fx-background-color: #00ADB5;" text="Create Account" textFill="#eeeeee">
+      <Button fx:id="createButton" layoutX="294.0" layoutY="496.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="33.0" prefWidth="221.0" style="-fx-background-color: #00ADB5;" text="Create Account" textFill="#eeeeee">
          <effect>
             <Reflection fraction="0.7" topOpacity="0.46">
                <input>
@@ -157,7 +157,7 @@
             <Image url="@sign-up.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="686.0" layoutY="541.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
+      <Button fx:id="backButton" layoutX="686.0" layoutY="541.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
          <effect>
             <Reflection fraction="0.7" topOpacity="0.46">
                <input>

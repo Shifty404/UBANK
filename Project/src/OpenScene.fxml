@@ -10,56 +10,21 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
    <children>
-      <Button fx:id="signupButton" layoutX="122.0" layoutY="405.0" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Sign up" textFill="#eeeeee">
-         <effect>
-            <Reflection>
-               <input>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant azimuth="250.0" />
-                     </light>
-                  </Lighting>
-               </input>
-            </Reflection>
-         </effect>
-         <font>
-            <Font name="AdobeDevanagari-Bold" size="18.0" />
-         </font></Button>
-      <Button fx:id="loginButton" layoutX="531.0" layoutY="405.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Log in" textFill="#eeeeee">
-         <effect>
-            <Reflection>
-               <input>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant azimuth="250.0" />
-                     </light>
-                  </Lighting>
-               </input>
-            </Reflection>
-         </effect>
-         <font>
-            <Font name="AdobeDevanagari-Bold" size="18.0" />
-         </font></Button>
       <VBox layoutX="235.0" layoutY="74.0" prefHeight="290.0" prefWidth="347.0" spacing="25.0">
          <children>
             <Label alignment="CENTER" prefHeight="78.0" prefWidth="347.0" text="Welcome" textFill="#eeeeee">
                <font>
-                  <Font name="Times New Roman" size="36.0" />
+                  <Font name="AdobeDevanagari-BoldItalic" size="36.0" />
                </font></Label>
             <Label alignment="CENTER" prefHeight="58.0" prefWidth="347.0" text="To" textFill="#eeeeee">
                <font>
-                  <Font name="Times New Roman" size="36.0" />
+                  <Font name="AdobeDevanagari-BoldItalic" size="36.0" />
                </font></Label>
             <ImageView fitHeight="104.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -71,5 +36,50 @@
             </ImageView>
          </children>
       </VBox>
+      <HBox layoutY="415.0" prefHeight="45.0" prefWidth="800.0" spacing="153.0">
+         <children>
+            <Button fx:id="signupButton" mnemonicParsing="false" onAction="#signupButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Sign up" textFill="#eeeeee">
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Log in" textFill="#eeeeee">
+               <effect>
+                  <Reflection>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="76.0" />
+         </padding>
+      </HBox>
    </children>
 </AnchorPane>

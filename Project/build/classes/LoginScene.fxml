@@ -20,9 +20,9 @@
             <Font size="13.0" />
          </font>
       </TextField>
-      <Button fx:id="loginButton" layoutX="282.0" layoutY="317.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="237.0" style="-fx-background-color: #00ADB5;" text="Log In">
+      <Button fx:id="loginButton" layoutX="282.0" layoutY="310.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Log In" textFill="#eeeeee">
          <font>
-            <Font name="Times New Roman Bold" size="13.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font>
          <effect>
             <Reflection>
@@ -38,11 +38,11 @@
                </input>
             </Reflection>
          </effect></Button>
-      <Label layoutX="339.0" layoutY="379.0" prefHeight="25.0" prefWidth="133.0" text="Forgotten password?" textFill="#00adb5">
+      <Label layoutX="354.0" layoutY="377.0" prefHeight="25.0" prefWidth="107.0" text="Forgot password?" textFill="#00adb5">
          <font>
             <Font name="System Italic" size="14.0" />
          </font></Label>
-      <Button fx:id="forgetPasswordButton" layoutX="304.0" layoutY="426.0" mnemonicParsing="false" onAction="#forgotPasswordButtonPushed" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #00ADB5;" text="Yes">
+      <Button fx:id="forgetPasswordButton" layoutX="282.0" layoutY="429.0" mnemonicParsing="false" onAction="#forgotPasswordButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Yes" textFill="#eeeeee">
          <effect>
             <Reflection>
                <input>
@@ -58,7 +58,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="13.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font></Button>
       <PasswordField fx:id="passwordField" layoutX="145.0" layoutY="234.0" prefHeight="35.0" prefWidth="521.0" promptText="Password" style="-fx-background-color: #EEEEEE;" />
       <ImageView fitHeight="84.0" fitWidth="91.0" layoutX="364.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
@@ -66,7 +66,7 @@
             <Image url="@Log-in.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="666.0" layoutY="529.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #00ADB5;" text="Back">
+      <Button fx:id="backButton" layoutX="683.0" layoutY="534.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
          <effect>
             <Reflection>
                <input>
@@ -82,7 +82,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="13.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font>
       </Button>
    </children>
