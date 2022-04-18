@@ -12,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -57,7 +56,8 @@ public class SignupSceneController implements Initializable {
     @FXML
     private void createButtonPushed(ActionEvent event) throws Exception {
         
-        try (BufferedWriter br = new BufferedWriter( new FileWriter("C:\\Users\\shifty\\Desktop\\Git prac\\UBANK\\Project\\src\\AccountData.txt", true))) {
+        //for signup
+        try (BufferedWriter br = new BufferedWriter( new FileWriter("AccountData.txt", true))) {
             String gender = null; // for gender
             
             // getting gender from radio buttons
@@ -68,6 +68,7 @@ public class SignupSceneController implements Initializable {
             if (this.genderGroup.getSelectedToggle().equals(this.femaleRadioButton)) {
                 gender = "Female";
             }
+            
             // getting birthday from date picker
             LocalDate birthday = birthdayDatePicker.getValue();
             
@@ -80,7 +81,7 @@ public class SignupSceneController implements Initializable {
             br.close();
         } 
         
-        
+        // for changing scene
         Parent groot = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
         Stage stage = (Stage)createButton.getScene().getWindow();
         Scene scene = new Scene(groot);
