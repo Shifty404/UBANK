@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CashWithdrawSceneController">
    <children>
-      <Button fx:id="backButton" layoutX="687.0" layoutY="527.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #00ADB5;" text="Back">
+      <Button fx:id="backButton" layoutX="687.0" layoutY="527.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
          <effect>
             <Reflection>
                <input>
@@ -30,12 +30,12 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="14.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font>
       </Button>
       <VBox alignment="CENTER" layoutX="-1.0" prefHeight="487.0" prefWidth="800.0" spacing="100.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="800.0" text="How much would you like to withdraw?" textFill="#00adb5">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="800.0" text="How much would you like to withdraw?" textFill="#eeeeee">
                <font>
                   <Font name="Times New Roman" size="36.0" />
                </font>
@@ -51,7 +51,7 @@
                   <Insets left="200.0" right="200.0" />
                </VBox.margin>
             </TextField>
-            <Button fx:id="withdrawConfirmButton" alignment="CENTER" mnemonicParsing="false" onAction="#withdrawConfirmButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Confirm">
+            <Button fx:id="withdrawConfirmButton" alignment="CENTER" mnemonicParsing="false" onAction="#withdrawConfirmButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Confirm" textFill="#eeeeee">
                <effect>
                   <Reflection>
                      <input>
@@ -67,7 +67,7 @@
                   </Reflection>
                </effect>
                <font>
-                  <Font name="Times New Roman Bold" size="14.0" />
+                  <Font name="AdobeDevanagari-Bold" size="18.0" />
                </font>
                <VBox.margin>
                   <Insets />

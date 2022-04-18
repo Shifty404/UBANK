@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupSceneController">
    <children>
-      <Button fx:id="createButton" layoutX="310.0" layoutY="469.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="25.0" prefWidth="208.0" style="-fx-background-color: #00ADB5;" text="Create Account">
+      <Button fx:id="createButton" layoutX="307.0" layoutY="496.0" mnemonicParsing="false" onAction="#createButtonPushed" prefHeight="25.0" prefWidth="208.0" style="-fx-background-color: #00ADB5;" text="Create Account" textFill="#eeeeee">
          <effect>
             <Reflection fraction="0.7" topOpacity="0.46">
                <input>
@@ -34,7 +34,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="14.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font>
       </Button>
       <HBox layoutX="231.0" layoutY="118.0" prefHeight="278.0" prefWidth="359.0">
@@ -43,7 +43,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="Name:" textAlignment="RIGHT" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="Name:" textAlignment="RIGHT" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -52,7 +52,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" text="Mail:" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Account Number:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -61,7 +61,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Birthday:" textFill="#00adb5">
+                        <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" text="Mail:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -70,7 +70,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Gender:" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Birthday:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -79,7 +79,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="98.0" text="Phone Number:" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Gender:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -88,7 +88,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Yearly Income:" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="98.0" text="Phone Number:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -97,7 +97,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Password:" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Yearly Income:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -106,7 +106,16 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Confirm Password:" textFill="#00adb5">
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Password:" textFill="#eeeeee">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Confirm Password:" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -118,16 +127,17 @@
             <VBox alignment="CENTER" prefHeight="214.0" prefWidth="208.0" spacing="16.0">
                <children>
                   <TextField fx:id="nameTextField" style="-fx-background-color: #EEEEEE;" />
+                  <TextField fx:id="accountNumberTextField" style="-fx-background-color: #eeeeee;" />
                   <TextField fx:id="mailTextField" style="-fx-background-color: #EEEEEE;" />
                   <DatePicker fx:id="birthdayDatePicker" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: #EEEEEE;" />
                   <HBox prefHeight="100.0" prefWidth="200.0" spacing="55.0">
                      <children>
-                        <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" text="Male" textFill="#00adb5">
+                        <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" text="Male" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="femaleRadioButton" mnemonicParsing="false" text="Female" textFill="#00adb5">
+                        <RadioButton fx:id="femaleRadioButton" mnemonicParsing="false" text="Female" textFill="#eeeeee">
                            <font>
                               <Font name="Times New Roman Bold" size="14.0" />
                            </font>
@@ -147,7 +157,7 @@
             <Image url="@sign-up.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="686.0" layoutY="551.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ADB5;" text="Back">
+      <Button fx:id="backButton" layoutX="686.0" layoutY="541.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
          <effect>
             <Reflection fraction="0.7" topOpacity="0.46">
                <input>
@@ -163,7 +173,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="14.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font>
       </Button>
    </children>

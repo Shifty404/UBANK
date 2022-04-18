@@ -31,7 +31,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="18.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font></Button>
       <Button fx:id="loginButton" layoutX="531.0" layoutY="405.0" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00ADB5;" text="Log in" textFill="#eeeeee">
          <effect>
@@ -49,7 +49,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="Times New Roman Bold" size="18.0" />
+            <Font name="AdobeDevanagari-Bold" size="18.0" />
          </font></Button>
       <VBox layoutX="235.0" layoutY="74.0" prefHeight="290.0" prefWidth="347.0" spacing="25.0">
          <children>
