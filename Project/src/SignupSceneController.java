@@ -55,7 +55,6 @@ public class SignupSceneController implements Initializable {
     
     @FXML
     private void createButtonPushed(ActionEvent event) throws Exception {
-        
         //for signup
         try (BufferedWriter br = new BufferedWriter( new FileWriter("AccountData.txt", true))) {
             String gender = null; // for gender
@@ -64,7 +63,6 @@ public class SignupSceneController implements Initializable {
             if (this.genderGroup.getSelectedToggle().equals(this.maleRadioButton)) {
                 gender = "Male";
             }
-            
             if (this.genderGroup.getSelectedToggle().equals(this.femaleRadioButton)) {
                 gender = "Female";
             }
@@ -73,23 +71,22 @@ public class SignupSceneController implements Initializable {
             LocalDate birthday = birthdayDatePicker.getValue();
             
             // checking password
-            if (passwordTextField.equals(confirmPasswordTextField)){
-                br.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText() + " 0 0 0 0 0");
-                System.out.println("Account created");
-            }
-            else {
+            if (!passwordTextField.getText().equals(confirmPasswordTextField.getText())){
                 System.out.println("Account not created");
             }
-            
-            br.close();
+            else {
+                // fot creating Account
+                br.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText() + " 0 0 0 0 0");
+                System.out.println("Account created");
+                br.close();
+                // for changing scene
+                Parent groot = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+                Stage stage = (Stage)createButton.getScene().getWindow();
+                Scene scene = new Scene(groot);
+                stage.setScene(scene);
+                stage.show();
+            }
         } 
-        
-        // for changing scene
-        Parent groot = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
-        Stage stage = (Stage)createButton.getScene().getWindow();
-        Scene scene = new Scene(groot);
-        stage.setScene(scene);
-        stage.show();
     }
     
     @FXML
