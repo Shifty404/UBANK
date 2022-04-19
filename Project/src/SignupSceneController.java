@@ -73,11 +73,14 @@ public class SignupSceneController implements Initializable {
             LocalDate birthday = birthdayDatePicker.getValue();
             
             // checking password
-            //if (passwordTextField.equals(confirmPasswordTextField)){
-            //}
+            if (passwordTextField.equals(confirmPasswordTextField)){
+                br.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText() + " 0 0 0 0 0");
+                System.out.println("Account created");
+            }
+            else {
+                System.out.println("Account not created");
+            }
             
-            br.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText());
-        
             br.close();
         } 
         
