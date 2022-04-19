@@ -1,6 +1,8 @@
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,11 +33,28 @@ public class LoginSceneController implements Initializable {
     
     @FXML
     private void loginButtonPushed(ActionEvent event) throws Exception {
-        Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
-        Stage stage = (Stage)loginButton.getScene().getWindow();
-        Scene scene = new Scene(groot);
-        stage.setScene(scene);
-        stage.show();
+        try {
+            File accountData = new File("AccountData.txt");
+            Scanner sc = new Scanner(accountData);
+            String toLabel = "";
+            while(sc.hasNextLine()){
+            String line = sc.nextLine();
+                if(!line.equals("")){
+                    String[] parts = line.split(" ");
+                    String email = parts[2];
+                    String password = parts[7];
+                    if(mailTextField.getText().equals(email) &&  passwordField.getText().equals(password)){
+                        Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+                        Stage stage = (Stage)loginButton.getScene().getWindow();
+                        Scene scene = new Scene(groot);
+                        stage.setScene(scene);
+                        stage.show();   
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("exception");
+        }
     }
 
     @FXML
