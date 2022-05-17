@@ -67,4 +67,8 @@ public class AppSceneController implements Initializable {
     private void exchangeRateCalculatorPushed(ActionEvent event) {
     }
 
+    public void passingInfo(String string) {
+        String fileLine = string;
+    }
+    
 }
