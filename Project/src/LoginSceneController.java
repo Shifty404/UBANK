@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -33,10 +34,16 @@ public class LoginSceneController implements Initializable {
     
     @FXML
     private void loginButtonPushed(ActionEvent event) throws Exception {
+        //checking in name has any whitespace
+        if (mailTextField.getText().trim().isEmpty() == true || passwordField.getText().trim().isEmpty() == true) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Mail or Password is empty.");
+                alert.showAndWait();
+            }
+        
         try {
             File accountData = new File("AccountData.txt");
             Scanner sc = new Scanner(accountData);
-            String toLabel = "";
             while(sc.hasNextLine()){
             String line = sc.nextLine();
                 if(!line.equals("")){
@@ -44,17 +51,21 @@ public class LoginSceneController implements Initializable {
                     String email = parts[2];
                     String password = parts[7];
                     if(mailTextField.getText().equals(email) &&  passwordField.getText().equals(password)){
-                        Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
+                        Parent groot = (Parent) loader.load();
+                        AppSceneController secController=loader.getController();
+                        secController.passingInfo(line);
                         Stage stage = (Stage)loginButton.getScene().getWindow();
                         Scene scene = new Scene(groot);
                         stage.setScene(scene);
-                        stage.show();   
+                        stage.show();
                     }
                 }
             }
         } catch (Exception e) {
-            System.out.println("exception");
+            System.out.println("Problem!");
         }
+        
     }
 
     @FXML
@@ -74,5 +85,5 @@ public class LoginSceneController implements Initializable {
         stage.setScene(scene);
         stage.show(); 
     }
-    
+
 }

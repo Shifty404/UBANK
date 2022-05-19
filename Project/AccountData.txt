@@ -1,3 +1,2 @@
-shifty 011211040 shifty.ishmam@gmail.com 2001-06-26 Male 01307539366 60000 shifty 0 0 0 0 0
-jasia 011211041 jasia@gmail.com 2001-10-01 Female 9875636241 1000000 jasia 0 0 0 0 0
-Alifa 011211125 alifa@gmail.com 2022-04-01 Female 013211125 100000 Alifa 0 0 0 0 0
+shifty 011211040 shifty.ishmam@gmail.com 2022-05-11 Male 01307539366 5000 shifty 0 0 0 0 0 0
+Atika 011211041 atika@gmail.com 2022-05-12 Female 011211041 0 atika 0 0 0 0 0 0
