@@ -42,8 +42,7 @@ public class LoginSceneController implements Initializable {
             }
         
         try {
-            File accountData = new File("AccountData.txt");
-            Scanner sc = new Scanner(accountData);
+            Scanner sc = new Scanner(new File("AccountData.txt"));
             while(sc.hasNextLine()){
             String line = sc.nextLine();
                 if(!line.equals("")){
