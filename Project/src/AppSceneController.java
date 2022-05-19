@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 
 public class AppSceneController implements Initializable {
 
+    
+    String fileLine = "";
+    
     @FXML
     private Button depositButton;
     @FXML
@@ -25,11 +28,15 @@ public class AppSceneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
     }    
 
     @FXML
     private void depositButtonPushed(ActionEvent event) throws Exception {
-        Parent groot = FXMLLoader.load(getClass().getResource("CashDepositScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CashDepositScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        CashDepositSceneController secController=loader.getController();
+        secController.passingInfo(fileLine);
         Stage stage = (Stage)depositButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -68,7 +75,7 @@ public class AppSceneController implements Initializable {
     }
 
     public void passingInfo(String string) {
-        String fileLine = string;
+        fileLine = string;
     }
     
 }
