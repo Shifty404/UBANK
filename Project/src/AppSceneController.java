@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 public class AppSceneController implements Initializable {
 
-    
     String fileLine = "";
     
     @FXML

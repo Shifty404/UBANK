@@ -36,7 +36,7 @@ public class CashDepositSceneController implements Initializable {
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(parts));
         accountInfo.addAll(Arrays.asList(parts));
         
-        System.out.println(accountInfo.get(0));
+        System.out.println(accountInfo.get(10));
         
         
         double Addingbalance = Double.parseDouble(depositAmountTextField.getText());
