@@ -36,6 +36,9 @@ public class CashDepositSceneController implements Initializable {
     
     @FXML
     private void depositConfirmButtonPushed(ActionEvent event) throws Exception {
+        
+        int lineNumber = 0;
+        
         // spliting account info and putting it in arrlist
         String[] fileLineParts = fileLine.split(" ");
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
@@ -45,7 +48,7 @@ public class CashDepositSceneController implements Initializable {
         String tempFile = "C:\\Users\\shift\\Desktop\\UBANK\\Project\\AccountBills.txt";
         try {
             Scanner sc = new Scanner(new File(tempFile));
-            BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile, true));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile, false));
             while(sc.hasNextLine()){
                 String line = sc.nextLine();
                 if(line == null) break;
@@ -58,17 +61,14 @@ public class CashDepositSceneController implements Initializable {
                         double addingBalance = Double.parseDouble(depositAmountTextField.getText());
                         double currentAccBalance = Double.parseDouble(fileInfo.get(1));
                         double updatedBalance = addingBalance + currentAccBalance;
-                        String update = Double.toString(updatedBalance);
-                        fileInfo.set(1, update);
-                        //fileInfo.set(1, updatedBalance + ""); // updating balance
+                        fileInfo.set(1, updatedBalance + ""); // updating balance
                         System.out.println(fileLine);
-                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) /*+ " " + fileInfo.get(7)+ " " + fileInfo.get(8) + " " + fileInfo.get(9) + " " + fileInfo.get(10) + " " + fileInfo.get(11) + " " + fileInfo.get(12) + " " + fileInfo.get(13) + " " + fileInfo.get(14)*/ +  "\n");
-                        //fileLine = fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6)+ " " + fileInfo.get(7)+ " " + fileInfo.get(8) + " " + fileInfo.get(9) + " " + fileInfo.get(10) + " " + fileInfo.get(11) + " " + fileInfo.get(12) + " " + fileInfo.get(13) + " " + fileInfo.get(14);
-                    }else {
-                        
-                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) /*+ " " + fileInfo.get(7)+ " " + fileInfo.get(8) + " " + fileInfo.get(9) + " " + fileInfo.get(10) + " " + fileInfo.get(11) + " " + fileInfo.get(12) + " " + fileInfo.get(13) + " " + fileInfo.get(14)*/ +  "\n");
+                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n"); 
+                    }else if (lineNumber != 0 || !accountInfo.get(1).equals(fileInfo.get(0)) ){
+                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n");
                     }
                 }
+                lineNumber++;
             }
             sc.close();
             bw.close();
