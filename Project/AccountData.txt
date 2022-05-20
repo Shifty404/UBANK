@@ -1,2 +1,1 @@
-shifty 011211040 shifty.ishmam@gmail.com 2022-05-11 Male 01307539366 5000 shifty 0.00 500.00 600.00 0.00 0.00 0.00 0.00
-Atika 011211041 atika@gmail.com 2022-05-12 Female 011211041 0 atika 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+shifty 011211040 shifty.ishmam@gmail.com 2022-05-01 Male 01307539366 500 s

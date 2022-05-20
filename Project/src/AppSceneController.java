@@ -36,6 +36,7 @@ public class AppSceneController implements Initializable {
         Parent groot = (Parent) loader.load();
         CashDepositSceneController secController=loader.getController();
         secController.passingInfo(fileLine);
+        System.out.println(fileLine);
         Stage stage = (Stage)depositButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
