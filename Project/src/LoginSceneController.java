@@ -57,13 +57,12 @@ public class LoginSceneController implements Initializable {
                         Stage stage = (Stage)loginButton.getScene().getWindow();
                         Scene scene = new Scene(groot);
                         stage.setScene(scene);
-                        sc.close();
                         stage.show();
                     }
                 }
             }
         } catch (Exception e) {
-            System.out.println("Problem!");
+            e.printStackTrace();
         }
         
     }
