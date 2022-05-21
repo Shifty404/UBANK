@@ -38,23 +38,24 @@ public class CashDepositSceneController implements Initializable {
     @FXML
     private void depositConfirmButtonPushed(ActionEvent event) throws Exception {
         
-        int lineNumber = 0;
+        //int lineNumber = 0;
         
         // spliting account info and putting it in arrlist
         String[] fileLineParts = fileLine.split(" ");
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
-        accountInfo.addAll(Arrays.asList(fileLineParts)); 
+        accountInfo.addAll(Arrays.asList(fileLineParts));
         
         // file work 
         ArrayList<String> tempArrayList = new ArrayList<>();
         
         try {
-            try (Scanner sc = new Scanner(new FileReader("AccountBills.txt"))){
+            try (FileReader fr = new FileReader("AccountBills.txt")){
+                Scanner sc = new Scanner(fr);
                 String line;
                 String[] lineArr;
                 
                 while ((line = sc.nextLine()) != null) {
-                    lineArr = line.split(" ");
+                    lineArr = line.split(",");
                     if (lineArr[0].equals(accountInfo.get(1))) {
                         // adding
                         double addingBalance = Double.parseDouble(depositAmountTextField.getText());
@@ -75,7 +76,7 @@ public class CashDepositSceneController implements Initializable {
                     }
                     
                 }
-                sc.close();
+                fr.close();
             } catch (Exception e) {
             }
         } catch (Exception e) {
@@ -83,8 +84,8 @@ public class CashDepositSceneController implements Initializable {
         
         try {
             try (PrintWriter pr = new PrintWriter("AccountBills.txt")){
-                for (String string : tempArrayList) {
-                    pr.print(string);
+                for (String str : tempArrayList) {
+                    pr.println(str);
                 }
                 pr.close();
             } catch (Exception e) {
