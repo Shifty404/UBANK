@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 public class CashDepositSceneController implements Initializable {
     
     String fileLine = "";
+    double UpBalance;
 
     @FXML
     private Button backButton;
@@ -44,21 +45,15 @@ public class CashDepositSceneController implements Initializable {
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
         accountInfo.addAll(Arrays.asList(fileLineParts));
         
+        double addingBalance = Double.parseDouble(depositAmountTextField.getText()); // Getting double in text field
         
-//        ArrayList<String> tempArrayList = new ArrayList<>();
-//        
-//        // adding
-//        double addingBalance = Double.parseDouble(depositAmountTextField.getText());
-//        double currentAccBalance = Double.parseDouble(tempArrayList.get(1));
-//        double updatedBalance = addingBalance + currentAccBalance;
         
-        edit.depositEdit("AccountBills.txt", accountInfo.get(1));
+        edit.depositEdit("AccountBills.txt", accountInfo.get(1), addingBalance);
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
         AppSceneController secController = loader.getController();
         secController.passingInfo(fileLine);
-        System.out.println(fileLine);
         Stage stage = (Stage)depositConfirmButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -81,33 +76,43 @@ public class CashDepositSceneController implements Initializable {
 }
 
 class edit{
-    public static void depositEdit(String filepath, String accountNo){
+    public static void depositEdit(String filepath, String AccountNo, double newBalance){
         
         String tempFile = "Temp.txt";
         File oldFile = new File(filepath);
         File newFile = new File(tempFile);
-        String acc = "";
+        String accNo = ""; String balance = ""; String electricBill = ""; String internetBill = ""; String gasBill = ""; String waterBill = ""; String govermentFee = ""; String creditCardBill = "";
         try {
             FileWriter fw = new FileWriter(tempFile);
             BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
             
             Scanner x = new Scanner(new File(filepath));
-            x.useDelimiter("[ \n]");
+//            x.useDelimiter("[ \n]");
             
-            while(x.hasNext()){
-                acc = x.next();
-                if (accountNo.equals(acc)) {
-                    pw.println(acc);
-                } 
-                else{
-                    pw.println(acc + "a");
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(AccountNo.equals(parts[0])){
+                    double currentAccBalance = Double.parseDouble(parts[1]);
+                    double updatedBalance = newBalance + currentAccBalance;
+                    bw.write(parts[0] + " " + updatedBalance + " " + parts[2]  + " " + parts[3]  + " " + parts[4] + " " + parts[5] + " " + parts[6] + " " + parts[7] + "\n");
+                }else{
+                    bw.write(parts[0] + " " + parts[1] + " " + parts[2]  + " " + parts[3]  + " " + parts[4] + " " + parts[5] + " " + parts[6] + " " + parts[7]  + "\n");
                 }
+                
+//                accNo = x.next();
+//                balance = x.next();
+//                electricBill = x.next();
+//                internetBill = x.next();
+//                gasBill = x.next();
+//                waterBill = x.next();
+//                govermentFee = x.next();
+//                creditCardBill = x.next();
+//                
             }
-            
             x.close();
-            pw.flush();
-            pw.close();
+            bw.flush();
+            bw.close();
             oldFile.delete();
             File dump = new File(filepath);
             newFile.renameTo(dump);
