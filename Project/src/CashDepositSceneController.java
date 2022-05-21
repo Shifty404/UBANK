@@ -1,6 +1,7 @@
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -44,37 +45,88 @@ public class CashDepositSceneController implements Initializable {
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
         accountInfo.addAll(Arrays.asList(fileLineParts)); 
         
-        // file work
-        String tempFile = "C:\\Users\\shift\\Desktop\\UBANK\\Project\\AccountBills.txt";
+        // file work 
+        ArrayList<String> tempArrayList = new ArrayList<>();
+        
         try {
-            Scanner sc = new Scanner(new File(tempFile));
-            BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile, false));
-            while(sc.hasNextLine()){
-                String line = sc.nextLine();
-                if(line == null) break;
-                if(!line.equals("")){
-                    String[] parts = line.split(" "); // spliting file info
-                    ArrayList<String> fileInfo = new ArrayList<>(Arrays.asList(parts));
-                    fileInfo.addAll(Arrays.asList(parts));
-                    if(accountInfo.get(1).equals(fileInfo.get(0))){
+            try (Scanner sc = new Scanner(new FileReader("AccountBills.txt"))){
+                String line;
+                String[] lineArr;
+                
+                while ((line = sc.nextLine()) != null) {
+                    lineArr = line.split(" ");
+                    if (lineArr[0].equals(accountInfo.get(1))) {
                         // adding
                         double addingBalance = Double.parseDouble(depositAmountTextField.getText());
-                        double currentAccBalance = Double.parseDouble(fileInfo.get(1));
+                        double currentAccBalance = Double.parseDouble(tempArrayList.get(1));
                         double updatedBalance = addingBalance + currentAccBalance;
-                        fileInfo.set(1, updatedBalance + ""); // updating balance
-                        System.out.println(fileLine);
-                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n"); 
-                    }else if (lineNumber != 0 || !accountInfo.get(1).equals(fileInfo.get(0)) ){
-                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n");
+                        
+                        tempArrayList.add(
+                            lineArr[0] + " " +
+                            updatedBalance + " " +
+                            lineArr[2] + " " +
+                            lineArr[3] + " " +
+                            lineArr[4] + " " +
+                            lineArr[5] + " " +
+                            lineArr[6] + " " +
+                            lineArr[7]);  
+                    }else{
+                        tempArrayList.add(line);
                     }
+                    
                 }
-                lineNumber++;
+                sc.close();
+            } catch (Exception e) {
             }
-            sc.close();
-            bw.close();
-        } catch (IOException | NumberFormatException e) {
-             e.printStackTrace();
+        } catch (Exception e) {
+        }
+        
+        try {
+            try (PrintWriter pr = new PrintWriter("AccountBills.txt")){
+                for (String string : tempArrayList) {
+                    pr.print(string);
+                }
+                pr.close();
+            } catch (Exception e) {
             }
+        } catch (Exception e) {
+        }
+        
+        
+        
+        
+        
+//        // file work
+//        String tempFile = "C:\\Users\\shift\\Desktop\\UBANK\\Project\\AccountBills.txt";
+//        try {
+//            Scanner sc = new Scanner(new File(tempFile));
+//            BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile, false));
+//            while(sc.hasNextLine()){
+//                String line = sc.nextLine();
+//                if(line == null) break;
+//                if(!line.equals("")){
+//                    String[] parts = line.split(" "); // spliting file info
+//                    ArrayList<String> fileInfo = new ArrayList<>(Arrays.asList(parts));
+//                    fileInfo.addAll(Arrays.asList(parts));
+//                    if(accountInfo.get(1).equals(fileInfo.get(0))){
+//                        // adding
+//                        double addingBalance = Double.parseDouble(depositAmountTextField.getText());
+//                        double currentAccBalance = Double.parseDouble(fileInfo.get(1));
+//                        double updatedBalance = addingBalance + currentAccBalance;
+//                        fileInfo.set(1, updatedBalance + ""); // updating balance
+//                        System.out.println(fileLine);
+//                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n"); 
+//                    }else if (lineNumber != 0 || !accountInfo.get(1).equals(fileInfo.get(0)) ){
+//                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n");
+//                    }
+//                }
+//                lineNumber++;
+//            }
+//            sc.close();
+//            bw.close();
+//        } catch (IOException | NumberFormatException e) {
+//             e.printStackTrace();
+//            }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
         AppSceneController secController = loader.getController();
