@@ -1,14 +1,10 @@
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import javafx.event.ActionEvent;
@@ -23,7 +19,7 @@ import javafx.stage.Stage;
 
 public class CashDepositSceneController implements Initializable {
     
-    String fileLine = "";
+    String accFileLine = "";
 
     @FXML
     private Button backButton;
@@ -40,7 +36,7 @@ public class CashDepositSceneController implements Initializable {
     private void depositConfirmButtonPushed(ActionEvent event) throws Exception {
         
         // spliting account info and putting it in arrlist
-        String[] fileLineParts = fileLine.split(" ");
+        String[] fileLineParts = accFileLine.split(" ");
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
         accountInfo.addAll(Arrays.asList(fileLineParts));
         
@@ -51,7 +47,7 @@ public class CashDepositSceneController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
         AppSceneController secController = loader.getController();
-        secController.passingInfo(fileLine);
+        secController.passingInfo(accFileLine);
         Stage stage = (Stage)depositConfirmButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -68,7 +64,7 @@ public class CashDepositSceneController implements Initializable {
     }
 
     public void passingInfo(String string) {
-        fileLine = string;
+        accFileLine = string;
     }
 
 }

@@ -50,6 +50,16 @@ public class LoginSceneController implements Initializable {
                     String email = parts[2];
                     String password = parts[7];
                     if(mailTextField.getText().equals(email) &&  passwordField.getText().equals(password)){
+                        
+                        // Taking bill info
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
                         Parent groot = (Parent) loader.load();
                         AppSceneController secController = loader.getController();

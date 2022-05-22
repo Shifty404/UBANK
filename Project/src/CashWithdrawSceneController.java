@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 public class CashWithdrawSceneController implements Initializable {
 
-    String fileLine = "";
+    String accFileLine = "";
     
     @FXML
     private Button withdrawConfirmButton;
@@ -38,7 +38,7 @@ public class CashWithdrawSceneController implements Initializable {
         
         
         // spliting account info and putting it in arrlist
-        String[] fileLineParts = fileLine.split(" ");
+        String[] fileLineParts = accFileLine.split(" ");
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
         accountInfo.addAll(Arrays.asList(fileLineParts));
         
@@ -50,7 +50,7 @@ public class CashWithdrawSceneController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
         AppSceneController secController = loader.getController();
-        secController.passingInfo(fileLine);
+        secController.passingInfo(accFileLine);
         Stage stage = (Stage)withdrawConfirmButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -68,7 +68,7 @@ public class CashWithdrawSceneController implements Initializable {
     }
 
     public void passingInfo(String string) {
-        fileLine = string;
+        accFileLine = string;
     }
     
 }
