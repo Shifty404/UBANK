@@ -78,7 +78,7 @@ public class PayBillSceneController implements Initializable {
         
         double internetBillBalance = Double.parseDouble(internetBillTextField.getText()); // Getting double in text field
         
-        abstractingEdit.withdrawEdit("AccountBills.txt", accountInfo.get(1), internetBillBalance);
+        internetBillEdit.withdrawEdit("AccountBills.txt", accountInfo.get(1), internetBillBalance);
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
