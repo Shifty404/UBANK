@@ -19,7 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
 import javafx.stage.Stage;
-import javax.swing.JOptionPane;
 
 public class SignupSceneController implements Initializable {
     
@@ -66,7 +65,9 @@ public class SignupSceneController implements Initializable {
     @FXML
     private void createButtonPushed(ActionEvent event) throws Exception {
         //for signup
-        try (BufferedWriter br = new BufferedWriter( new FileWriter("AccountData.txt", true))) {
+        try {
+            BufferedWriter bra = new BufferedWriter( new FileWriter("AccountData.txt", true));
+            BufferedWriter brb = new BufferedWriter( new FileWriter("AccountBills.txt", true));
             String gender = null; // for gender
             
             //checking in name has any whitespace
@@ -93,13 +94,14 @@ public class SignupSceneController implements Initializable {
             }
             else {
                 // fot creating Account
-                br.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText() + " 0 0 0 0 0 0 0");
-                System.out.println("Account created");
-                br.close();
+                bra.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText());
+                brb.write("\n" + accountNumberTextField.getText() + " 0.00 0.00 0.00 0.00 0.00 0.00 0.00");
+                bra.close();
+                brb.close();
                 
                 //
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("Accout has been created.");
+                alert.setContentText("Account has been created.");
                 alert.showAndWait();
                 
                 // for changing scene

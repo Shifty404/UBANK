@@ -42,8 +42,7 @@ public class LoginSceneController implements Initializable {
             }
         
         try {
-            File accountData = new File("AccountData.txt");
-            Scanner sc = new Scanner(accountData);
+            Scanner sc = new Scanner(new File("AccountData.txt"));
             while(sc.hasNextLine()){
             String line = sc.nextLine();
                 if(!line.equals("")){
@@ -51,9 +50,19 @@ public class LoginSceneController implements Initializable {
                     String email = parts[2];
                     String password = parts[7];
                     if(mailTextField.getText().equals(email) &&  passwordField.getText().equals(password)){
+                        
+                        // Taking bill info
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
                         Parent groot = (Parent) loader.load();
-                        AppSceneController secController=loader.getController();
+                        AppSceneController secController = loader.getController();
                         secController.passingInfo(line);
                         Stage stage = (Stage)loginButton.getScene().getWindow();
                         Scene scene = new Scene(groot);
@@ -63,7 +72,7 @@ public class LoginSceneController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            System.out.println("Problem!");
+            e.printStackTrace();
         }
         
     }

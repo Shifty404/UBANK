@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OpenSceneController">
    <children>
       <VBox layoutX="235.0" layoutY="74.0" prefHeight="290.0" prefWidth="347.0" spacing="25.0">
          <children>
@@ -54,7 +54,7 @@
                   </Reflection>
                </effect>
                <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Log in" textFill="#eeeeee">
@@ -73,7 +73,7 @@
                   </Reflection>
                </effect>
                <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
          </children>
