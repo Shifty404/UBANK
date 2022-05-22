@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CashWithdrawSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CashWithdrawSceneController">
    <children>
-      <Button fx:id="backButton" layoutX="687.0" layoutY="527.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
+      <Button fx:id="backButton" layoutX="680.0" layoutY="530.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
          <effect>
             <Reflection>
                <input>
@@ -30,7 +30,7 @@
             </Reflection>
          </effect>
          <font>
-            <Font name="AdobeDevanagari-Bold" size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Button>
       <VBox alignment="CENTER" layoutX="-1.0" prefHeight="487.0" prefWidth="800.0" spacing="100.0">
@@ -67,7 +67,7 @@
                   </Reflection>
                </effect>
                <font>
-                  <Font name="AdobeDevanagari-Bold" size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
                <VBox.margin>
                   <Insets />

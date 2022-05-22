@@ -32,10 +32,12 @@ public class AppSceneController implements Initializable {
     private Button changePasswordButton;
     @FXML
     private Label currentBalanceLabel;
+    @FXML
+    private Button showBalanceButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        billInfo();
+        
     }    
 
     @FXML
@@ -44,7 +46,6 @@ public class AppSceneController implements Initializable {
         Parent groot = (Parent) loader.load();
         CashDepositSceneController secController=loader.getController();
         secController.passingInfo(accFileLine);
-        System.out.println(accFileLine);
         Stage stage = (Stage)depositButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -57,7 +58,6 @@ public class AppSceneController implements Initializable {
         Parent groot = (Parent) loader.load();
         CashWithdrawSceneController secController=loader.getController();
         secController.passingInfo(accFileLine);
-        System.out.println(accFileLine);
         Stage stage = (Stage)withdrawButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -70,7 +70,6 @@ public class AppSceneController implements Initializable {
         Parent groot = (Parent) loader.load();
         PayBillSceneController secController=loader.getController();
         secController.passingInfo(accFileLine);
-        System.out.println(accFileLine);
         Stage stage = (Stage)payBillButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -85,17 +84,9 @@ public class AppSceneController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
+    
     @FXML
-    private void changePasswordButtonPushed(ActionEvent event) {
-    }
-    
-    
-    public void passingInfo(String string) {
-        accFileLine = string;
-    }
-    
-    public void billInfo(){
+    private void showBalanceButtonPushed(ActionEvent event) {
         
         String[] fileLineParts = accFileLine.split(" ");
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
@@ -116,8 +107,17 @@ public class AppSceneController implements Initializable {
         }
         
         currentBalanceLabel.setText(Balance);
+        
     }
-
     
+    
+    @FXML
+    private void changePasswordButtonPushed(ActionEvent event) {
+        
+    }
+    
+    public void passingInfo(String string) {
+        accFileLine = string;
+    }
     
 }

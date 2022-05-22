@@ -37,7 +37,7 @@ public class LoginSceneController implements Initializable {
         //checking in name has any whitespace
         if (mailTextField.getText().trim().isEmpty() == true || passwordField.getText().trim().isEmpty() == true) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Mail or Password is empty.");
+                alert.setContentText("Account or Password is empty.");
                 alert.showAndWait();
             }
         
@@ -47,19 +47,9 @@ public class LoginSceneController implements Initializable {
             String line = sc.nextLine();
                 if(!line.equals("")){
                     String[] parts = line.split(" ");
-                    String email = parts[2];
-                    String password = parts[7];
-                    if(mailTextField.getText().equals(email) &&  passwordField.getText().equals(password)){
-                        
-                        // Taking bill info
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                    String account = parts[1];
+                    String password = parts[7]; 
+                    if(mailTextField.getText().equals(account) &&  passwordField.getText().equals(password)){
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
                         Parent groot = (Parent) loader.load();
                         AppSceneController secController = loader.getController();
