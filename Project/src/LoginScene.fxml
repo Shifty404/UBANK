@@ -15,7 +15,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginSceneController">
    <children>
-      <TextField fx:id="mailTextField" layoutX="145.0" layoutY="170.0" prefHeight="35.0" prefWidth="521.0" promptText="Email address" style="-fx-background-color: #EEEEEE;">
+      <TextField fx:id="accountNoTextField" layoutX="145.0" layoutY="170.0" prefHeight="35.0" prefWidth="521.0" promptText="Account No." style="-fx-background-color: #EEEEEE;">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
