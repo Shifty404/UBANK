@@ -24,7 +24,6 @@ import javafx.stage.Stage;
 public class CashDepositSceneController implements Initializable {
     
     String fileLine = "";
-    double UpBalance;
 
     @FXML
     private Button backButton;
@@ -47,8 +46,7 @@ public class CashDepositSceneController implements Initializable {
         
         double addingBalance = Double.parseDouble(depositAmountTextField.getText()); // Getting double in text field
         
-        
-        edit.depositEdit("AccountBills.txt", accountInfo.get(1), addingBalance);
+        addingEdit.depositEdit("AccountBills.txt", accountInfo.get(1), addingBalance);
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
@@ -75,47 +73,38 @@ public class CashDepositSceneController implements Initializable {
 
 }
 
-class edit{
+class addingEdit{
     public static void depositEdit(String filepath, String AccountNo, double newBalance){
         
         String tempFile = "Temp.txt";
         File oldFile = new File(filepath);
         File newFile = new File(tempFile);
+        
         String accNo = ""; String balance = ""; String electricBill = ""; String internetBill = ""; String gasBill = ""; String waterBill = ""; String govermentFee = ""; String creditCardBill = "";
+        
         try {
             FileWriter fw = new FileWriter(tempFile);
             BufferedWriter bw = new BufferedWriter(fw);
-            
             Scanner x = new Scanner(new File(filepath));
-//            x.useDelimiter("[ \n]");
             
             while(x.hasNextLine()){
                 String line = x.nextLine();
                 String [] parts = line.split(" ");
                 if(AccountNo.equals(parts[0])){
                     double currentAccBalance = Double.parseDouble(parts[1]);
-                    double updatedBalance = newBalance + currentAccBalance;
+                    double updatedBalance = currentAccBalance + newBalance;
                     bw.write(parts[0] + " " + updatedBalance + " " + parts[2]  + " " + parts[3]  + " " + parts[4] + " " + parts[5] + " " + parts[6] + " " + parts[7] + "\n");
                 }else{
                     bw.write(parts[0] + " " + parts[1] + " " + parts[2]  + " " + parts[3]  + " " + parts[4] + " " + parts[5] + " " + parts[6] + " " + parts[7]  + "\n");
-                }
-                
-//                accNo = x.next();
-//                balance = x.next();
-//                electricBill = x.next();
-//                internetBill = x.next();
-//                gasBill = x.next();
-//                waterBill = x.next();
-//                govermentFee = x.next();
-//                creditCardBill = x.next();
-//                
+                } 
             }
+            
             x.close();
             bw.flush();
             bw.close();
             oldFile.delete();
             File dump = new File(filepath);
-            newFile.renameTo(dump);
+            newFile.renameTo(dump); 
             
         }catch (Exception e){
             e.printStackTrace();
