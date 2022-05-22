@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Light.Distant?>
@@ -40,9 +39,9 @@
             <Image url="@Logo.png" />
          </image>
       </ImageView>
-      <HBox layoutX="78.0" layoutY="289.0" prefHeight="106.0" prefWidth="663.0" spacing="150.0">
+      <HBox layoutX="78.0" layoutY="289.0" prefHeight="142.0" prefWidth="663.0" spacing="60.0">
          <children>
-            <VBox prefHeight="110.0" prefWidth="255.0" spacing="40.0">
+            <VBox prefHeight="118.0" prefWidth="220.0" spacing="40.0">
                <children>
                   <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Deposit" textFill="#eeeeee">
                      <font>
@@ -84,7 +83,47 @@
                   </Button>
                </children>
             </VBox>
-            <VBox prefHeight="122.0" prefWidth="255.0" spacing="40.0">
+            <VBox prefHeight="118.0" prefWidth="226.0" spacing="17.0">
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="27.0" prefWidth="199.0" text="Current Balance" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <effect>
+                        <Lighting bumpInput="$null">
+                           <light>
+                              <Light.Distant azimuth="250.0" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+                  <Label fx:id="currentBalanceLabel" alignment="CENTER" prefHeight="25.0" prefWidth="183.0" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="showBalanceButton" mnemonicParsing="false" onAction="#showBalanceButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Show" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="250.0" />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="118.0" prefWidth="227.0" spacing="40.0">
                <children>
                   <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawButtonPushed" prefHeight="33.0" prefWidth="250.0" style="-fx-background-color: #00ADB5;" text="Withdraw" textFill="#eeeeee">
                      <font>
@@ -128,29 +167,5 @@
             </VBox>
          </children>
       </HBox>
-      <VBox layoutX="46.0" layoutY="33.0" prefHeight="78.0" prefWidth="184.0">
-         <children>
-            <Label prefHeight="42.0" prefWidth="183.0" text="Your current balance" textAlignment="CENTER" textFill="#eeeeee">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-               <effect>
-                  <Lighting bumpInput="$null">
-                     <light>
-                        <Light.Distant azimuth="250.0" />
-                     </light>
-                  </Lighting>
-               </effect>
-            </Label>
-            <Label fx:id="currentBalanceLabel" prefHeight="37.0" prefWidth="116.0" textAlignment="CENTER">
-               <VBox.margin>
-                  <Insets left="25.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="System Bold Italic" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
    </children>
 </AnchorPane>
