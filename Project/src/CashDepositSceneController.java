@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import javafx.event.ActionEvent;
@@ -38,100 +39,19 @@ public class CashDepositSceneController implements Initializable {
     @FXML
     private void depositConfirmButtonPushed(ActionEvent event) throws Exception {
         
-        int lineNumber = 0;
-        
         // spliting account info and putting it in arrlist
         String[] fileLineParts = fileLine.split(" ");
         ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
-        accountInfo.addAll(Arrays.asList(fileLineParts)); 
+        accountInfo.addAll(Arrays.asList(fileLineParts));
         
-        // file work 
-        ArrayList<String> tempArrayList = new ArrayList<>();
+        double addingBalance = Double.parseDouble(depositAmountTextField.getText()); // Getting double in text field
         
-        try {
-            try (Scanner sc = new Scanner(new FileReader("AccountBills.txt"))){
-                String line;
-                String[] lineArr;
-                
-                while ((line = sc.nextLine()) != null) {
-                    lineArr = line.split(" ");
-                    if (lineArr[0].equals(accountInfo.get(1))) {
-                        // adding
-                        double addingBalance = Double.parseDouble(depositAmountTextField.getText());
-                        double currentAccBalance = Double.parseDouble(tempArrayList.get(1));
-                        double updatedBalance = addingBalance + currentAccBalance;
-                        
-                        tempArrayList.add(
-                            lineArr[0] + " " +
-                            updatedBalance + " " +
-                            lineArr[2] + " " +
-                            lineArr[3] + " " +
-                            lineArr[4] + " " +
-                            lineArr[5] + " " +
-                            lineArr[6] + " " +
-                            lineArr[7]);  
-                    }else{
-                        tempArrayList.add(line);
-                    }
-                    
-                }
-                sc.close();
-            } catch (Exception e) {
-            }
-        } catch (Exception e) {
-        }
+        addingEdit.depositEdit("AccountBills.txt", accountInfo.get(1), addingBalance);
         
-        try {
-            try (PrintWriter pr = new PrintWriter("AccountBills.txt")){
-                for (String string : tempArrayList) {
-                    pr.print(string);
-                }
-                pr.close();
-            } catch (Exception e) {
-            }
-        } catch (Exception e) {
-        }
-        
-        
-        
-        
-        
-//        // file work
-//        String tempFile = "C:\\Users\\shift\\Desktop\\UBANK\\Project\\AccountBills.txt";
-//        try {
-//            Scanner sc = new Scanner(new File(tempFile));
-//            BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile, false));
-//            while(sc.hasNextLine()){
-//                String line = sc.nextLine();
-//                if(line == null) break;
-//                if(!line.equals("")){
-//                    String[] parts = line.split(" "); // spliting file info
-//                    ArrayList<String> fileInfo = new ArrayList<>(Arrays.asList(parts));
-//                    fileInfo.addAll(Arrays.asList(parts));
-//                    if(accountInfo.get(1).equals(fileInfo.get(0))){
-//                        // adding
-//                        double addingBalance = Double.parseDouble(depositAmountTextField.getText());
-//                        double currentAccBalance = Double.parseDouble(fileInfo.get(1));
-//                        double updatedBalance = addingBalance + currentAccBalance;
-//                        fileInfo.set(1, updatedBalance + ""); // updating balance
-//                        System.out.println(fileLine);
-//                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n"); 
-//                    }else if (lineNumber != 0 || !accountInfo.get(1).equals(fileInfo.get(0)) ){
-//                        bw.write(fileInfo.get(0) + " " +  fileInfo.get(1) + " " + fileInfo.get(2) + " " + fileInfo.get(3) + " " + fileInfo.get(4)+ " " +  fileInfo.get(5) + " " + fileInfo.get(6) + " " + fileInfo.get(7) + "\n");
-//                    }
-//                }
-//                lineNumber++;
-//            }
-//            sc.close();
-//            bw.close();
-//        } catch (IOException | NumberFormatException e) {
-//             e.printStackTrace();
-//            }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
         Parent groot = (Parent) loader.load();
         AppSceneController secController = loader.getController();
         secController.passingInfo(fileLine);
-        System.out.println(fileLine);
         Stage stage = (Stage)depositConfirmButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -150,4 +70,45 @@ public class CashDepositSceneController implements Initializable {
     public void passingInfo(String string) {
         fileLine = string;
     }
+
+}
+
+class addingEdit{
+    public static void depositEdit(String filepath, String AccountNo, double newBalance){
+        
+        String tempFile = "Temp.txt";
+        File oldFile = new File(filepath);
+        File newFile = new File(tempFile);
+        
+        String accNo = ""; String balance = ""; String electricBill = ""; String internetBill = ""; String gasBill = ""; String waterBill = ""; String govermentFee = ""; String creditCardBill = "";
+        
+        try {
+            FileWriter fw = new FileWriter(tempFile);
+            BufferedWriter bw = new BufferedWriter(fw);
+            Scanner x = new Scanner(new File(filepath));
+            
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(AccountNo.equals(parts[0])){
+                    double currentAccBalance = Double.parseDouble(parts[1]);
+                    double updatedBalance = currentAccBalance + newBalance;
+                    bw.write(parts[0] + " " + updatedBalance + " " + parts[2]  + " " + parts[3]  + " " + parts[4] + " " + parts[5] + " " + parts[6] + " " + parts[7] + "\n");
+                }else{
+                    bw.write(parts[0] + " " + parts[1] + " " + parts[2]  + " " + parts[3]  + " " + parts[4] + " " + parts[5] + " " + parts[6] + " " + parts[7]  + "\n");
+                } 
+            }
+            
+            x.close();
+            bw.flush();
+            bw.close();
+            oldFile.delete();
+            File dump = new File(filepath);
+            newFile.renameTo(dump); 
+            
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
 }

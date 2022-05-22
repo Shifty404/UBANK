@@ -62,7 +62,7 @@ public class LoginSceneController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            System.out.println("Problem!");
+            e.printStackTrace();
         }
         
     }

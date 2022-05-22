@@ -45,7 +45,11 @@ public class AppSceneController implements Initializable {
 
     @FXML
     private void withdrawButtonPushed(ActionEvent event) throws Exception {
-        Parent groot = FXMLLoader.load(getClass().getResource("CashWithdrawScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CashWithdrawScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        CashWithdrawSceneController secController=loader.getController();
+        secController.passingInfo(fileLine);
+        System.out.println(fileLine);
         Stage stage = (Stage)withdrawButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
@@ -54,7 +58,11 @@ public class AppSceneController implements Initializable {
 
     @FXML
     private void payBillButtonPushed(ActionEvent event) throws Exception {
-        Parent groot = FXMLLoader.load(getClass().getResource("PayBillScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PayBillScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        PayBillSceneController secController=loader.getController();
+        secController.passingInfo(fileLine);
+        System.out.println(fileLine);
         Stage stage = (Stage)payBillButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
