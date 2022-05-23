@@ -95,7 +95,7 @@ public class SignupSceneController implements Initializable {
             else {
                 // fot creating Account
                 bra.write("\n" + nameTextField.getText() + " " + accountNumberTextField.getText() + " " + mailTextField.getText() + " " + birthday.toString() + " " + gender + " " + phoneNumberTextField.getText() + " " + yearlyIncomeTextField.getText() + " " + passwordTextField.getText());
-                brb.write("\n" + accountNumberTextField.getText() + " 0.00 0.00 0.00 0.00 0.00 0.00 0.00");
+                brb.write("\n" + accountNumberTextField.getText() + " 0.0 0.0 0.0 0.0 0.0 0.0 0.0");
                 bra.close();
                 brb.close();
                 

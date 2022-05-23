@@ -33,10 +33,10 @@ public class LoginSceneController implements Initializable {
     }    
     
     @FXML
-    private void loginButtonPushed(ActionEvent event) throws Exception {
+    private void loginButtonPushed(ActionEvent event) throws Exception{
         //checking in name has any whitespace
         if (accountNoTextField.getText().trim().isEmpty() == true || passwordField.getText().trim().isEmpty() == true) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setContentText("Account or Password is empty.");
                 alert.showAndWait();
             }
@@ -61,6 +61,7 @@ public class LoginSceneController implements Initializable {
                     }
                 }
             }
+            sc.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

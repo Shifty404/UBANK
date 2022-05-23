@@ -56,8 +56,11 @@ public class CashDepositSceneController implements Initializable {
 
     @FXML
     private void backButtonPushed(ActionEvent event) throws Exception {
-        Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
-        Stage stage = (Stage)backButton.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        AppSceneController secController = loader.getController();
+        secController.passingInfo(accFileLine);
+        Stage stage = (Stage) backButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();
@@ -75,8 +78,6 @@ class addingEdit{
         String tempFile = "Temp.txt";
         File oldFile = new File(filepath);
         File newFile = new File(tempFile);
-        
-        String accNo = ""; String balance = ""; String electricBill = ""; String internetBill = ""; String gasBill = ""; String waterBill = ""; String govermentFee = ""; String creditCardBill = "";
         
         try {
             FileWriter fw = new FileWriter(tempFile);

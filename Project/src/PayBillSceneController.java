@@ -2,12 +2,14 @@
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,18 +24,6 @@ public class PayBillSceneController implements Initializable {
 
     String accFileLine = "";
     
-    @FXML
-    private Label electricityBillLabel;
-    @FXML
-    private Label electricityBillLabel1;
-    @FXML
-    private Label electricityBillLabel2;
-    @FXML
-    private Label electricityBillLabel3;
-    @FXML
-    private Label electricityBillLabel4;
-    @FXML
-    private Label electricityBillLabel5;
     @FXML
     private TextField electricBillTextField;
     @FXML
@@ -58,11 +48,157 @@ public class PayBillSceneController implements Initializable {
     private TextField creditCardTextField;
     @FXML
     private Button creditCardBillPayButton;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Label electricityBillLabel;
+    @FXML
+    private Label InternetBillLabel;
+    @FXML
+    private Label gasBillLabel;
+    @FXML
+    private Label waterBillLabel;
+    @FXML
+    private Label governmentFeeLabel;
+    @FXML
+    private Label creditCardBillLabel;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) { 
     }    
 
+    @FXML
+    private void elecChanged(Event event) {
+        // spliting account info and putting it in arrlist
+        String[] fileLineParts = accFileLine.split(" ");
+        ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
+        accountInfo.addAll(Arrays.asList(fileLineParts));
+        
+        try {
+            Scanner x = new Scanner(new File("AccountBills.txt"));
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(accountInfo.get(1).equals(parts[0])){
+                    electricityBillLabel.setText(parts[2]);
+                }
+            }
+            x.close();    
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void interChanged(Event event) {
+        // spliting account info and putting it in arrlist
+        String[] fileLineParts = accFileLine.split(" ");
+        ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
+        accountInfo.addAll(Arrays.asList(fileLineParts));
+        
+        try {
+            Scanner x = new Scanner(new File("AccountBills.txt"));
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(accountInfo.get(1).equals(parts[0])){
+                    InternetBillLabel.setText(parts[3]);
+                }
+            }
+            x.close();    
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void gasChanged(Event event) {
+        // spliting account info and putting it in arrlist
+        String[] fileLineParts = accFileLine.split(" ");
+        ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
+        accountInfo.addAll(Arrays.asList(fileLineParts));
+        
+        try {
+            Scanner x = new Scanner(new File("AccountBills.txt"));
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(accountInfo.get(1).equals(parts[0])){
+                    gasBillLabel.setText(parts[4]);
+                }
+            }
+            x.close();    
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void waterChanged(Event event) {
+        // spliting account info and putting it in arrlist
+        String[] fileLineParts = accFileLine.split(" ");
+        ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
+        accountInfo.addAll(Arrays.asList(fileLineParts));
+        
+        try {
+            Scanner x = new Scanner(new File("AccountBills.txt"));
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(accountInfo.get(1).equals(parts[0])){
+                    waterBillLabel.setText(parts[5]);
+                }
+            }
+            x.close();    
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void govChanged(Event event) {
+        // spliting account info and putting it in arrlist
+        String[] fileLineParts = accFileLine.split(" ");
+        ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
+        accountInfo.addAll(Arrays.asList(fileLineParts));
+        
+        try {
+            Scanner x = new Scanner(new File("AccountBills.txt"));
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(accountInfo.get(1).equals(parts[0])){
+                    governmentFeeLabel.setText(parts[6]);
+                }
+            }
+            x.close();    
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void cardChanged(Event event) {
+        // spliting account info and putting it in arrlist
+        String[] fileLineParts = accFileLine.split(" ");
+        ArrayList<String> accountInfo = new ArrayList<>(Arrays.asList(fileLineParts));
+        accountInfo.addAll(Arrays.asList(fileLineParts));
+        
+        try {
+            Scanner x = new Scanner(new File("AccountBills.txt"));
+            while(x.hasNextLine()){
+                String line = x.nextLine();
+                String [] parts = line.split(" ");
+                if(accountInfo.get(1).equals(parts[0])){
+                    creditCardBillLabel.setText(parts[7]);
+                }
+            }
+            x.close();    
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     @FXML
     private void electricBillPayButtonPushed(ActionEvent event) throws Exception {
         
@@ -196,9 +332,21 @@ public class PayBillSceneController implements Initializable {
         stage.show();
     }
     
+    @FXML
+    private void backButtonPushed(ActionEvent event) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        AppSceneController secController = loader.getController();
+        secController.passingInfo(accFileLine);
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show();
+    }
     public void passingInfo(String string) {
         accFileLine = string;
     }
+    
     
 }
 
