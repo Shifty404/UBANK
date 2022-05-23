@@ -60,8 +60,11 @@ public class CashWithdrawSceneController implements Initializable {
     
     @FXML
     private void backButtonPushed(ActionEvent event) throws Exception{
-        Parent groot = FXMLLoader.load(getClass().getResource("AppScene.fxml"));
-        Stage stage = (Stage)backButton.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        AppSceneController secController = loader.getController();
+        secController.passingInfo(accFileLine);
+        Stage stage = (Stage) backButton.getScene().getWindow();
         Scene scene = new Scene(groot);
         stage.setScene(scene);
         stage.show();

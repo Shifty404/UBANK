@@ -20,23 +20,23 @@ public class LoginSceneController implements Initializable {
     @FXML
     private Button forgetPasswordButton;
     @FXML
-    private TextField mailTextField;
-    @FXML
     private Button loginButton;
     @FXML
     private PasswordField passwordField;
     @FXML
     private Button backButton;
+    @FXML
+    private TextField accountNoTextField;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }    
     
     @FXML
-    private void loginButtonPushed(ActionEvent event) throws Exception {
+    private void loginButtonPushed(ActionEvent event) throws Exception{
         //checking in name has any whitespace
-        if (mailTextField.getText().trim().isEmpty() == true || passwordField.getText().trim().isEmpty() == true) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
+        if (accountNoTextField.getText().trim().isEmpty() == true || passwordField.getText().trim().isEmpty() == true) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setContentText("Account or Password is empty.");
                 alert.showAndWait();
             }
@@ -49,7 +49,7 @@ public class LoginSceneController implements Initializable {
                     String[] parts = line.split(" ");
                     String account = parts[1];
                     String password = parts[7]; 
-                    if(mailTextField.getText().equals(account) &&  passwordField.getText().equals(password)){
+                    if(accountNoTextField.getText().equals(account) &&  passwordField.getText().equals(password)){
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("AppScene.fxml"));
                         Parent groot = (Parent) loader.load();
                         AppSceneController secController = loader.getController();
@@ -61,6 +61,7 @@ public class LoginSceneController implements Initializable {
                     }
                 }
             }
+            sc.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

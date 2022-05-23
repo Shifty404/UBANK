@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -10,184 +11,399 @@
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="750.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PayBillSceneController">
    <children>
-      <Label layoutX="185.0" layoutY="43.0" text="Which bill would you like to pay?" textFill="#31299e">
+      <Label layoutX="129.0" layoutY="43.0" text="Which bill would you like to pay?" textFill="#00adb5">
          <font>
-            <Font size="24.0" />
+            <Font name="Times New Roman" size="36.0" />
          </font>
       </Label>
       <TabPane layoutY="111.0" prefHeight="467.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab closable="false" text="Electric bill">
+            <Tab text="Welcome">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="133.0" layoutY="133.0" prefHeight="148.0" prefWidth="485.0" text=" Please click the tabs above to chose your bills." textFill="#eeeeee">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab closable="false" onSelectionChanged="#elecChanged" text="Electric bill">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your electricity bill is " />
-                        <Label fx:id="electricityBillLabel" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField fx:id="electricBillTextField" layoutX="73.0" layoutY="176.0" />
-                        <Button fx:id="electricBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#electricBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
-                           <effect>
-                              <Reflection>
-                                 <input>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant azimuth="250.0" />
-                                       </light>
-                                    </Lighting>
-                                 </input>
-                              </Reflection>
-                           </effect></Button>
+                        <VBox alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="200.0" prefWidth="377.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="24.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="169.0" text="Your electricity bill is " textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="electricityBillLabel" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="How much would you like to pay?" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="electricBillTextField">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="electricBillPayButton" mnemonicParsing="false" onAction="#electricBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="Pay" textFill="#eeeeee">
+                                 <effect>
+                                    <Reflection>
+                                       <input>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant azimuth="250.0" />
+                                             </light>
+                                          </Lighting>
+                                       </input>
+                                    </Reflection>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children></AnchorPane>
             </content>
           </Tab>
-            <Tab closable="false" text="Internet bill">
+            <Tab closable="false" onSelectionChanged="#interChanged" text="Internet bill">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your internet bill is " />
-                        <Label fx:id="electricityBillLabel1" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField fx:id="internetBillTextField" layoutX="73.0" layoutY="176.0" />
-                        <Button fx:id="internetBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#internetBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
-                           <effect>
-                              <Reflection>
-                                 <input>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant azimuth="250.0" />
-                                       </light>
-                                    </Lighting>
-                                 </input>
-                              </Reflection>
-                           </effect>
-                        </Button>
+                        <VBox alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="200.0" prefWidth="377.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="24.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="155.0" text="Your internet bill is " textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="InternetBillLabel" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="How much would you like to pay?" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="internetBillTextField">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="internetBillPayButton" mnemonicParsing="false" onAction="#internetBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="Pay" textFill="#eeeeee">
+                                 <effect>
+                                    <Reflection>
+                                       <input>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant azimuth="250.0" />
+                                             </light>
+                                          </Lighting>
+                                       </input>
+                                    </Reflection>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab closable="false" text="Gas bill">
+            <Tab closable="false" onSelectionChanged="#gasChanged" text="Gas bill">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your gas bill is " />
-                        <Label fx:id="electricityBillLabel2" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField fx:id="gasBillTextField" layoutX="73.0" layoutY="176.0" />
-                        <Button fx:id="gasBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#gasBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
-                           <effect>
-                              <Reflection>
-                                 <input>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant azimuth="250.0" />
-                                       </light>
-                                    </Lighting>
-                                 </input>
-                              </Reflection>
-                           </effect>
-                        </Button>
+                        <VBox alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="200.0" prefWidth="377.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="24.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="122.0" text="Your gas bill is " textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="gasBillLabel" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="How much would you like to pay?" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gasBillTextField">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="gasBillPayButton" mnemonicParsing="false" onAction="#gasBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="Pay" textFill="#eeeeee">
+                                 <effect>
+                                    <Reflection>
+                                       <input>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant azimuth="250.0" />
+                                             </light>
+                                          </Lighting>
+                                       </input>
+                                    </Reflection>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab closable="false" text="Water bill">
+            <Tab closable="false" onSelectionChanged="#waterChanged" text="Water bill">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your water bill is " />
-                        <Label fx:id="electricityBillLabel3" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField fx:id="waterBillTextField" layoutX="73.0" layoutY="176.0" />
-                        <Button fx:id="waterBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#waterBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
-                           <effect>
-                              <Reflection>
-                                 <input>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant azimuth="250.0" />
-                                       </light>
-                                    </Lighting>
-                                 </input>
-                              </Reflection>
-                           </effect>
-                        </Button>
+                        <VBox alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="200.0" prefWidth="377.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="24.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="137.0" text="Your water bill is " textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="waterBillLabel" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="How much would you like to pay?" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="waterBillTextField">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="waterBillPayButton" mnemonicParsing="false" onAction="#waterBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="Pay" textFill="#eeeeee">
+                                 <effect>
+                                    <Reflection>
+                                       <input>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant azimuth="250.0" />
+                                             </light>
+                                          </Lighting>
+                                       </input>
+                                    </Reflection>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab closable="false" text="Government fees">
+            <Tab closable="false" onSelectionChanged="#govChanged" text="Government fee">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="58.0" layoutY="94.0" prefHeight="17.0" prefWidth="142.0" text="Your government fees are" />
-                        <Label fx:id="electricityBillLabel4" layoutX="200.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField fx:id="governmentFeesTextField" layoutX="73.0" layoutY="176.0" />
-                        <Button fx:id="governmentFeesPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#governmentFeesPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
-                           <effect>
-                              <Reflection>
-                                 <input>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant azimuth="250.0" />
-                                       </light>
-                                    </Lighting>
-                                 </input>
-                              </Reflection>
-                           </effect>
-                        </Button>
+                        <VBox alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="200.0" prefWidth="377.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="24.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="217.0" text="Your total government fee is" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="governmentFeeLabel" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="How much would you like to pay?" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="governmentFeesTextField">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="governmentFeesPayButton" mnemonicParsing="false" onAction="#governmentFeesPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="Pay" textFill="#eeeeee">
+                                 <effect>
+                                    <Reflection>
+                                       <input>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant azimuth="250.0" />
+                                             </light>
+                                          </Lighting>
+                                       </input>
+                                    </Reflection>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab closable="false" text="Credit card bill">
+            <Tab closable="false" onSelectionChanged="#cardChanged" text="Credit card bill">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="58.0" layoutY="94.0" prefHeight="15.0" prefWidth="119.0" text="Your credit card bill is " />
-                        <Label fx:id="electricityBillLabel5" layoutX="177.0" layoutY="94.0" text="&lt;Amount&gt;" />
-                        <Label layoutX="58.0" layoutY="138.0" text="how much would you like to pay?" />
-                        <TextField fx:id="creditCardTextField" layoutX="73.0" layoutY="176.0" />
-                        <Button fx:id="creditCardBillPayButton" layoutX="110.0" layoutY="225.0" mnemonicParsing="false" onAction="#creditCardBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="pay">
-                           <effect>
-                              <Reflection>
-                                 <input>
-                                    <Lighting>
-                                       <bumpInput>
-                                          <Shadow />
-                                       </bumpInput>
-                                       <light>
-                                          <Light.Distant azimuth="250.0" />
-                                       </light>
-                                    </Lighting>
-                                 </input>
-                              </Reflection>
-                           </effect>
-                        </Button>
+                        <VBox alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="200.0" prefWidth="377.0" spacing="50.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="24.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="181.0" text="Your credit card bill is " textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="creditCardBillLabel" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="How much would you like to pay?" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="creditCardTextField">
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="creditCardBillPayButton" mnemonicParsing="false" onAction="#creditCardBillPayButtonPushed" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #00ADB5;" text="Pay" textFill="#eeeeee">
+                                 <effect>
+                                    <Reflection>
+                                       <input>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant azimuth="250.0" />
+                                             </light>
+                                          </Lighting>
+                                       </input>
+                                    </Reflection>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
         </tabs>
       </TabPane>
+      <Button fx:id="backButton" layoutX="649.0" layoutY="24.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00ADB5;" text="Back" textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <Reflection>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="250.0" />
+                     </light>
+                  </Lighting>
+               </input>
+            </Reflection>
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

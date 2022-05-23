@@ -41,7 +41,7 @@ public class AppSceneController implements Initializable {
     }    
 
     @FXML
-    private void depositButtonPushed(ActionEvent event) throws Exception {
+    private void depositButtonPushed(ActionEvent event) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CashDepositScene.fxml"));
         Parent groot = (Parent) loader.load();
         CashDepositSceneController secController=loader.getController();
@@ -53,7 +53,7 @@ public class AppSceneController implements Initializable {
     }
 
     @FXML
-    private void withdrawButtonPushed(ActionEvent event) throws Exception {
+    private void withdrawButtonPushed(ActionEvent event) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CashWithdrawScene.fxml"));
         Parent groot = (Parent) loader.load();
         CashWithdrawSceneController secController=loader.getController();
@@ -65,7 +65,7 @@ public class AppSceneController implements Initializable {
     }
 
     @FXML
-    private void payBillButtonPushed(ActionEvent event) throws Exception {
+    private void payBillButtonPushed(ActionEvent event) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("PayBillScene.fxml"));
         Parent groot = (Parent) loader.load();
         PayBillSceneController secController=loader.getController();
@@ -77,7 +77,7 @@ public class AppSceneController implements Initializable {
     }
 
     @FXML
-    private void signoutButtonPushed(ActionEvent event) throws Exception {
+    private void signoutButtonPushed(ActionEvent event) throws Exception{
         Parent groot = FXMLLoader.load(getClass().getResource("OpenScene.fxml"));
         Stage stage = (Stage)signoutButton.getScene().getWindow();
         Scene scene = new Scene(groot);
@@ -105,15 +105,19 @@ public class AppSceneController implements Initializable {
         }catch (Exception e){
             e.printStackTrace();
         }
-        
         currentBalanceLabel.setText(Balance);
-        
     }
     
-    
     @FXML
-    private void changePasswordButtonPushed(ActionEvent event) {
-        
+    private void changePasswordButtonPushed(ActionEvent event) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ResetPasswordScene.fxml"));
+        Parent groot = (Parent) loader.load();
+        ResetPasswordSceneController secController = loader.getController();
+        secController.passingInfo(accFileLine);
+        Stage stage = (Stage)changePasswordButton.getScene().getWindow();
+        Scene scene = new Scene(groot);
+        stage.setScene(scene);
+        stage.show(); 
     }
     
     public void passingInfo(String string) {
